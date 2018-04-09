@@ -1,0 +1,426 @@
+\section{Introduction}
+
+\subsection{Antibiotic resistance}
+
+Antibiotics add, on average, twenty years to a person's life\cite{davies2013drugs}. However, antibiotic resistance is increasing alarmingly and is now recognised as a major threat to global health\cite{ResistanceUS,davies2013drugs}. Antibiotic discovery had its heyday in the 1940s to 60s, which saw the discovery of many new classes of antibiotic. Since then, the rate of discovery of new classes has slowed and resistance to existing treatments has increased.
+
+The story of how Alexander Fleming discovered penicillin by accidentally allowing a Petri dish containing \textit{Staphylococcus aureus} to become contaminated with \textit{Penicillium} mould whilst he was on holiday in Suffolk \cite{davies2013drugs} is well known to many scientists. The initial serendipitous discovery of penicillin occurred in 1928 and was reported in 1929\cite{Fleming1929}, but it was not until 1943 that the drug was mass produced thanks to the research of Ernst Chain and Howard Florey. However, bacterial resistance to penicillin was being found in hospitals by the late 1940s \cite{Barber1947, Rountree1949}. This alarmingly quick emergence of resistance is a common phenomenon for antibiotics (see \ref{fig:AB_timeline}) as bacteria have multiple resistance mechanisms against antibacterial agents. These mechanisms can be broken down into five main categories:
+
+\begin{enumerate}
+\item The bacterium may inactivate the drug before it can cause damage, for example the hydrolysis of $\beta$-lactam antibiotics such as penicillin by $\beta$-lactamase enzymes.
+
+\item The bacterium may produce a membrane, cell wall or biofilm which does not allow the drug to pass through, for example biofilm formation may allow bacterial resistance to antibiotics to increase 1000-fold compared with bacteria in suspension culture\cite{Stewart2001}.
+
+\item The bacterium may pump antibacterial molecules out of its cell membrane using efflux pumps, for example the mexAB and mexXY pumps used by \textit{Pseudomonas aeruginosa}\cite{Poole2004}.
+
+\item Mutations may cause the target of the antibacterial molecule to alter such that the molecule no longer effectively binds the target, for example the alteration of penicillin binding proteins which are involved in the final stages of peptidoglycan biosynthesis in the cell walls of MRSA and other penicillin-resistant bacteria\cite{Fuda2004}.
+
+\item The bacterium may switch to using a metabolic pathway which does not involve the target of the antibacterial molecule, for example sulfonamide resistance may be achieved by taking in folic acid from the environment rather than synthesising it using \textit{p}-aminobenzoic acid - a process which is blocked by sulfonamides\cite{Skold2000}.
+
+\end{enumerate}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=1]{AB_timeline}
+		\caption{A timeline of when various antibiotics were first introduced and when resistance to them first appeared. Figure from Clatworthy \textit{et al.} \cite{Clatworthy2007} \label{fig:AB_timeline}}
+	\end{center}
+\end{figure}
+
+\subsection{Quorum sensing}
+
+A quorum is defined as "A fixed minimum number of members of an assembly or society that must be present at any of its meetings to make the proceedings of that meeting valid." \cite{Dictionary}  
+A similar concept is used in bacterial signalling, whereby group behaviour is only triggered when a certain minimum population of bacteria has been reached. Examples of group behaviour include bioluminescence, the  production  of  virulence  factors  and  biofilm  formation.  
+It is advantageous for bacteria to coordinate such behaviours as they would be ineffective, and therefore a waste of resources, when carried out by a single bacterium but effective when carried out as a group.
+
+\subsubsection{\textit{Vibrio fischeri}}
+
+The first example of quorum sensing was discovered in \textit{Vibrio fischeri}, a symbiotic bacterium that produces bioluminescence in the photophore of the Hawaiian bobtail squid, \textit{Euprymna scolopes} \cite{Nealson1970a,Miller2001,Visick2006} (see \ref{fig:ES+MJ}a). This bacterium receives amino acids\cite{Graf1998, Lemus2000} from its host in exchange for producing light which the squid uses for counterillumination, to camouflage itself\cite{Jones2004} (\textit{V. fischeri} also has symbiotic relationships with other species, including the Japanese pinecone fish, \textit{Monocentris japonica}\cite{Ruby1976})(see \ref{fig:ES+MJ}b). 
+
+\begin{figure}[H]
+	\begin{center}
+		\begin{tabular}{cc}
+	    	\textbf{a} & \textbf{b}\\
+			\includegraphics[width=0.45\textwidth, height=5cm]{Euprymna_scolopes.jpg} & \includegraphics[width=0.45\textwidth, height=5cm]{Monocentris_japonica.jpg} \\
+			
+		\end{tabular}	
+		
+		\caption{a) "Euprymna scolopes, South shore of Oahu, Hawaii" by Jamie Foster. Licensed under CC BY-SA 3.0 via Commons. 
+		b) "Monocentris japonica.1 - Aquarium Finisterrae" by Drow\texttt{\_}male. Licensed under GFDL via Commons. \label{fig:ES+MJ}}
+		
+	\end{center}
+\end{figure}
+
+
+If a low population  of \textit{V. fischeri} is  present  in  the  photophore,  the  light  that the bacteria could produce would  be insufficient to  attract prey. Therefore, the bacteria conserve resources by not producing light.
+However, if there is a high population of \textit{V. fischeri} it is useful for them all to produce light, as this incentivises the squid to provide them with nutrients. 
+
+\subsubsubsection{The LuxR-LuxI system}
+
+The bacteria sense the population of other \textit{V. fischeri} in their vicinity by the detection of 3-oxo-C$_6$-HSL \compound{cmpd:HLO6}\cite{Eberhard1981} (see \ref{fig:HLO6}), a freely diffusible\cite{Kaplan1985} molecule which is secreted by all \textit{V. fischeri} cells\cite{Schaefer1996} at a low basal level\cite{Miller2001}. When the bacterial population density, and hence the concentration of 3-oxo-C$_6$-HSL \compound{cmpd:HLO6}, reaches a threshold, a response is triggered leading to expression of high levels of luciferase, and hence a 10,000-fold\cite{Devine1989} increase in the production of (blue-green%\cite{Greenberg1999}) light\cite{Engebrecht1983}. A positive feedback mechanism leads to further production of 3-oxo-C$_6$-HSL \compound{cmpd:HLO6} and hence amplification of the signal. This is the reason that 3-oxo-C$_6$-HSL \compound{cmpd:HLO6} is known as an autoinducer.
+
+The quorum sensing system of \textit{V. fischeri} consists of two operons (see \ref{fig:VF_QS}). The left operon encodes just one gene, \textit{luxR}, a transcription factor which binds 3-oxo-C$_6$-HSL \compound{cmpd:HLO6}. The right operon encodes \textit{luxICDABEG}. \textit{luxI} encodes an enzyme (LuxI) which uses acyl-acyl carrier protein and \textit{S}-adenosyl-L-methionine (SAM\nomenclature{SAM}{SAM}) to form 3-oxo-C$_6$-HSL \compound{cmpd:HLO6} by lactonisation and acylation \cite{Parsek1999, Watson2002}. \textit {luxCDABEG} encodes luciferase enzymes required for light production. Both operons are continuously expressed at low levels, leading to production of low concentrations of LuxI, 3-oxo-C$_6$-HSL \compound{cmpd:HLO6} and LuxR, and low-level light production\cite{Engebrecht1983}. 
+
+\textit{V. fischeri} can multiply to very high cell concentrations in the photophore of \textit{E. scolopes} (around 10$^9$ cells\cite{Ruby1993, Ruby1998, Nyholm1998}, or 10$^{11}$ cells per mL \cite{Miller2001} in the organ of a mature squid). As concentrations rise to these levels, the concentration of 3-oxo-C$_6$-HSL \compound{cmpd:HLO6} also rises. At a threshold of around 1-10 $\mu$g/mL\cite{Eberhard1981}, 3-oxo-C$_6$-HSL \compound{cmpd:HLO6} binds to a N-terminal domain of LuxR\cite{Hanzelka1995}, leading to unmasking of the C-terminal transcriptional activator domain \cite{Choi1991,Choi1992}. The LuxR-3-oxo-C$_6$-HSL complex can then bind to the \textit{lux} operator, which is situated between the left and right operons and, unusually, affects the transcription of both operons in a bidirectional manner, involving both positive and negative regulation\cite{Shadel1991}. It is thought that the LuxR-3-oxo-C$_6$-HSL complex forms a homodimer\cite{Choi1992a}, but this has not been conclusively proven\cite{Antunes2008,Miyashiro2012}.
+
+Binding of LuxR-3-oxo-C$_6$-HSL complex to the \textit{lux} operator activates transcription of the right operon, leading to production of both 3-oxo-C$_6$-HSL \compound{cmpd:HLO6} and light. Production of more 3-oxo-C$_6$-HSL \compound{cmpd:HLO6} enables a positive feedback loop, re-inforcing the effect of high population density on 3-oxo-C$_6$-HSL \compound{cmpd:HLO6} concentration and hence light production.
+
+Concurrently, transcription of the left operon is also affected by binding of the LuxR-3-oxo-C$_6$-HSL complex to the \textit{lux} operator, but in a more complex manner. At low concentrations of 3-oxo-C$_6$-HSL \compound{cmpd:HLO6} transcription of the left operon is activated, leading to production of more LuxR.
+However, at high concentrations of 3-oxo-C$_6$-HSL \compound{cmpd:HLO6} production of LuxR is inhibited in an autoinducer-dependent manner\cite{Dunlap1989}. This effect is dependent on DNA sequences found upstream of the left operon, within the right operon, and without them LuxR has a stimulatory effect at all concentrations of LuxR and autoinducer.
+
+
+
+
+\begin{figure}[H]
+	\begin{center}
+		\schemeref[HLO6]{cmpd:HLO6}
+		\includegraphics[scale=1]{HLO6.eps}
+		\caption{3-oxo-C$_6$-HSL \compound{cmpd:HLO6}. \label{fig:HLO6}}
+	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=1]{VFQS.jpg}
+		\caption{The LuxR-LuxI quorum sensing system in \textit{V. fischeri}. \label{fig:VF_QS}}
+	\end{center}
+\end{figure}
+
+\subsubsubsection{Other quorum sensing systems}
+
+Since the discovery in 1970 of the LuxR-LuxI quorum sensing system in \textit{V. fischeri}, several other mechanisms have also been discovered (it should be noted that several of the proteins mentioned in this section were first characterised in \textit{Vibrio harveyi}, and functions may be assigned by analogy to a closely-related \textit{V. harveyi} protein\cite{Miyashiro2012}). Systems using two other quorum sensing molecules, \textit{N}-octanoyl-homoserine lactone (C$_8$-HSL \compound{cmpd:HL8}) and a furanosyl borate diester (AI-2 \compound{cmpd:AI2}) have been discovered, both of which act via the \textit{luxCDABEG} system and increase luminescence by increasing luciferase production\cite{Miyashiro2012,Verma2013} (see \ref{fig:VFQS_full} and \ref{fig:VF_QSMs}).
+Additional controls in the \textit{lux} promoter region have also been discovered, which respond to O$_2$ and cAMP\cite{Miyashiro2012} (see \ref{sec:O2} and \ref{sec:cAMP}). 
+
+The AinS–AinR system uses C$_8$-HSL \compound{cmpd:HL8}, synthesised by AinS, as its signalling molecule\cite{Lupp2003, Miyashiro2012,Gilson1995}. C$_8$-HSL \compound{cmpd:HL8} has two main effects on the quorum sensing network. Firstly, it can bind to LuxR\cite{Schaefer1996}, albeit with lower affinity than 3-oxo-C$_6$-HSL \compound{cmpd:HLO6}, leading to partial upregulation of lux operon transcription.
+Secondly, it binds to the histidine kinase AinR, inhibiting its ability to phosphorylate the histidine phosphotransferase LuxU, which links into the LuxR pathway by a less direct route (see later in this section)\cite{Timmen2006}.  
+
+%possible repression of ainSR by LuxR\cite{Kimbrough2013} (speculative, check for updates).
+
+The LuxS–LuxP/Q system uses AI-2 \compound{cmpd:AI2}, synthesised by LuxS, as its signalling molecule\cite{Miyashiro2012,Neiditch2005,Neiditch2006} (this pathway is common to all \textit{Vibrio} species\cite{Miyashiro2012}). The receptor of AI-2 \compound{cmpd:AI2} is a complex of a two proteins, LuxP and LuxQ. LuxP is a periplasmic protein which binds AI-2 \compound{cmpd:AI2}, LuxQ is an inner membrane histidine kinase of the two-component sensor kinase family\cite{Bassler1994}. It is likely that LuxQ is constitutively dimeric, although this has not yet been demonstrated \cite{Stock2000}. 
+
+When AI-2 \compound{cmpd:AI2} is not bound to LuxP, LuxQ autophosphorylates a histidine residue\cite{Neiditch2006}. This phosphoryl group is then transferred to an aspartic acid residue in LuxQ, and then to a histidine residue in LuxU. 
+
+When AI-2 \compound{cmpd:AI2} binds to LuxP, this causes a major conformational change in the LuxP/Q complex, replacing one set of contacts between the proteins with another\cite{Neiditch} and causing the formation of an asymmetric complex of two LuxP/Q dimers. Formation of the asymmetric dimers switches the activity of LuxQ from kinase to phosphatase, which can then dephosphorylate LuxU.
+
+At high cell density, and hence autoinducer concentration, both the AinS–AinR system and the LuxS–LuxP/Q system bring about a decrease in the amount of phosphorylated LuxU. LuxU is a phosphotransferase protein which transfers its phosphate group to an aspartic acid residue in LuxO\cite{Freeman1999}. Phosphorylated LuxO inhibits quorum sensing responses by via LuxR. Hence, at high cell densities there is a decreased amount of phosphorylated LuxU present, leading to a lack of phosphorylated LuxO, and hence increased quorum sensing responses, e.g. light production. This 'many-to-one' signalling pathway is common in bacterial two-component signalling systems \cite{Laub2007} and is found in several other \textit{Vibrionaceae}\cite{Milton2006}.
+
+LuxO phosphate inhibits quorum sensing responses via $\sigma_{54}$-dependent transcriptional activation of \textit{qrr1}\cite{Miyamoto2000,Miyashiro2010} (despite the proximity of the \textit{luxOU} and \textit{qrr} promoters, LuxO only affects the activates the production of Qrr1 and not itself\cite{Lilley2000}). Qrr1 is a small RNA molecule (a quorum regulatory RNA or Qrr) which, with the help of Hfq, can bind to LitR RNA, leading to its degradation\cite{Miyashiro2010}. Qrr1 is the only Qrr to regulate LitR expression in \textit{V. fischeri}, and is conserved across all \textit{Vibrionaceae}\cite{Miyashiro2010}. In contrast, in other \textit{Vibrionaceae} a family of Qrrs is often used\cite{Lenz2004}.
+
+Qrr1/Hfq-mediated degradation of LitR mRNA inhibits the production of LitR, an activator of the \textit{lux} operon. LitR binds to a region of the \textit{luxR} promoter, causing increased LuxR production and hence increased bioluminescence\cite{Fidopiastis2002}.
+
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=1]{VFQS_full.jpg}
+		\caption{Quorum sensing in \textit{V. fischeri}. \label{fig:VFQS_full}}
+	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\schemeref[HLO6]{cmpd:HLO6}
+		\schemeref[HL8]{cmpd:HL8}
+		\schemeref[AI2]{cmpd:AI2}
+		\includegraphics[scale=1]{VF_QSMs.eps}
+		\caption{Quorum sensing molecules in \textit{V. fischeri}. \label{fig:VF_QSMs}}
+	\end{center}
+\end{figure}
+
+\subsubsubsection{The effect of O$_2$} \label{sec:O2}
+
+\textit{V. fischeri} uses the ArcA-ArcB system to sense how oxygen-rich its environment is, by monitoring the redox state of various quinones produced by the cell. 
+In an oxygen-rich environment, luminescence is stimulated. It is though that luminescence is used by \textit{V. fischeri} make its environment less oxidising, as luminescence consumes oxygen. 
+
+ROS are bad and it doesn't want them\cite{Visick2000}
+
+ ArcB is a histidine kinase which senses the redox state of the quinones. When the environment is low in oxygen or reactive oxygen species, the quinones are reduced and can stimulate ArcB to phosphorylate ArcA. ArcA is a response regulator which represses the transcription of \textit{luxICDABEG} (and to a lesser extent, \textit{luxR}). 
+
+\subsubsubsection{The effect of cAMP} \label{sec:cAMP}
+
+cAMP
+
+\subsubsubsection{The purpose of multiple signalling pathways} %better title
+
+It might reasonably be asked: why does \textit{V. fischeri} use three quorum sensing pathways rather than just one? The answer to this question lies in the bacterium's relationship with its squid host. It has been shown that the LuxS-LuxP/Q and AinS-AinR systems are important in the medium cell densities found during early colonisation of the host, whereas the LuxR-LuxI system is important at the higher cell densities found in late colonisation\cite{Lupp2003,Lupp2005}.
+
+It has been shown that the LuxS-LuxP/Q system does not have an especially large effect on colonisation of the host squid, although it does have some effect on luminescence\cite{Lupp2004}. It has therefore been speculated that the LuxS-LuxP/Q system is more important in the colonisation of other marine invertibrates, either in their light organs\cite{Ruby1976,Reichelt1977} or as part of multi-species colonies in their guts \cite{Lupp2004,Ramesh1986}.
+
+The AinS-AinR system has a larger effect on colonisation and luminescence, in that \textit{ainS} mutants show only 10-20 \% of wild-type luciferase activity at medium cell densities in culture (10$_8$ to 10$_8$ cells ml$_{-1}$)\cite{Lupp2003}. At the higher cell densities in the squid host (>10$_{10}$ cells ml$_{-1}$), \textit{ainS} mutants show 10-40 \% of wild-type luciferase activity, an effect which can be partially attributed to failure of the mutants to colonise the host (bacterial cell numbers are down to 20-80 \% compared to the wild type).
+This failure of \textit{ainS} mutants to colonise the host is due to \textit{ain} regulation of pathways involved in early colonisation. The AinS-AinR system controls around 30 genes via LuxO and LitR\cite{Lupp2005}. \textit{ain} quorum sensing is thought to repress several motility genes, causing loss of flagella, which are initially required for normal colonisation of the host\cite{Millikan2002a,Graf1994}, but are lost as the bacteria colonise the host\cite{Ruby1993}. 
+\textit{ain} quorum sensing also induces a putative exopolysaccharide, which could be important in biofilm formation inside the host, or evasion of its immune system\cite{Roberts1996}, as well as two unique.
+In addition, \textit{ain} quorum sensing affects the transcription several genes involved in metabolism, and new genes of unknown function which could affect colonisation by an as yet unknown pathway.
+
+In contrast to the AinS-AinR, the LuxI-LuxR system is only fully induced at the high cell densities found in the \textit{E. scolopes} light organ. At medium cell densities, C$_8$-HSL \compound{cmpd:HL8} is thought to be the dominant autoinducer, partially activating transcription from the \textit{lux} operon by binding to both AinR and LuxR\cite{Lupp2003}. At high cell densities, C$_8$-HSL \compound{cmpd:HL8} is displaced from LuxR by 3-oxo-C$_6$-HSL \compound{cmpd:HLO6}, leading to full light production.
+
+\textit{lux} quorum sensing also affects the transcription of five non-\textit{lux} proteins which could potentially act as late colonisation factors\cite{Callahan2000,Qin2007}. Three of these genes, \textit{qsrP}, \textit{acfA}, and \textit{ribB}, are directly activated by LuxR/3-oxo-C$_6$-HSL\cite{Qin2007} and a strain lacking \textit{qsrP} is less effective at colonising \textit{E. scolopes} than the wild type, providing good evidence that it is a late-stage colonisation factor\cite{Callahan2000}.
+
+
+
+ain positive feedback, LuxPQ not\cite{Lupp2004}
+
+Which do CRP and Arc act on?
+Add phos.
+LitR upregulates AinS\cite{Lupp2004}
+
+
+
+
+
+Quorum sensing has since been observed in many species of bacteria, including \textit{P. aeruginosa}, \textit{Agrobacterium tumefaciens}, \textit{Erwinia carotovora}, \textit{Streptococcus pneumoniae}, \textit{Bacillus subtilis}, \textit{S. aureus}, \textit{Vibrio harveyi}, \textit{Escherichia coli}, \textit{Myxococcus xanthus}, \textit{Salmonella enterica}, \textit{Yersinia enterocolitica}  \textit{Aeromonas} sp. and \textit{Acinetobacter} sp.\cite{Miller2001,Fuqua1994,Waters2005,Atkinson2006,Chan2011,Sauer2002,Michael2001,Ahmer2004,Nealson1970}. 
+Many of these bacteria are significant causes of disease and death in humans, for example, it is estimated that in 2005 in the US \textit{S. aureus} caused 477,927 hospitalisations and 11,406 deaths\cite{Klein2007}. \textit{S. aureus} uses a peptide QSM know as autoinducing peptide (AIP) (see \ref{fgr:QSMs} in \ref{sec:FutAIP}) which interacts with the \textit{agr} system leading to increased protease and toxin production\cite{Antunes2010}. \textit{P. aeruginosa} also uses quorum sensing to coordinate biofilm formation, swarming motility and virulence.
+
+
+
+
+
+
+\subsubsection{\textit{Pseudomonas aeruginosa}\label{sec:PAQSMs}}
+
+One of the most well-studied examples of QS is in \textit{P. aeruginosa}.
+\textit{P. aeruginosa} is a Gram-negative opportunistic pathogen which typically infects immunocompromised individuals such as those with cystic fibrosis, neutropenia and AIDS. It can infect the pulmonary and urinary tracts as well being the most frequent cause of burn wound infections and the most frequent conloniser of medical devices such as catheters\cite{Bodey1983}.
+
+\textit{P. aeruginosa} uses quorum sensing (QS) to coordinate biofilm formation, swarming motility and virulence. The QSMs used by \textit{P. aeruginosa} are shown in \ref{fgr:PA_QSMs} (HHQ \compound{cmpd:HHQ} is a precursor to PQS \compound{cmpd:PQS} but can bind to its receptor, PQSr, and hence can act as a QSM\cite{Xiao2006}). QS in \textit{P. aeruginosa} involves a complex interplay of the four signalling molecules and various proteins (see \ref{fgr:PA_QS})\cite{Dubern2008}. QS regulates the production of virulence factors including elastase, alkaline protease, exotoxin A, rhamnolipids, pyocyanin, lectins and superoxide dismutases, as well as regulating biofilm formation.
+
+\textit{P. aeruginosa} has a low susceptibility to many antibiotics due to its chromosomally encoded multidrug efflux pumps: mexAB and mexXY\cite{Poole2004}. It is also difficult for drugs to cross into cells due to low cell wall permeability and biofilm formation. \textit{P. aeruginosa} may also acquire antibiotic resistance by mutation or horizontal gene transfer\cite{cornelis2008pseudomonas}. This high level of antibiotic resistance makes \textit{P. aeruginosa} an important target for drug discovery.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=\textwidth]{PAQS_full.png}
+		\caption{Quorum sensing in \textit{P. aeruginosa}\cite{Dubern2008}. \label{fgr:PA_QS}}
+	\end{center}
+\end{figure}
+
+%ideally save as tiff then convert to png
+
+\begin{figure}[H]
+	\begin{center}
+		\schemeref[HL4]{cmpd:HL4}
+		\schemeref[HLO12]{cmpd:HLO12}
+		\schemeref[PQS1]{cmpd:PQS}
+		\schemeref[HHQ1]{cmpd:HHQ}
+		\schemeref[AI2]{cmpd:AI2}
+		\includegraphics[scale=1]{PA_QSMs}
+		\caption{\textit{P. aeruginosa} quorum sensing molecules. \label{fgr:PA_QSMs}}
+	\end{center}
+\end{figure}
+
+
+
+
+\subsection{Siderophores}
+
+Siderophores are peptides or small molecules used by microorganisms to chelate iron for the purposes of 'iron mining'\cite{Hider2010}. Soluble iron is often scarce but it is crucial for many cellular processes including respiration and DNA synthesis. Siderophores are synthesised by the microorganisms and secreted into the extracellular environment where they bind to \ce{Fe3+}, often with exceptionally high affinities. The iron-bound siderophores are then brought back into the cell by active transport and the iron is released, either by reduction of the Fe$^{3+}$ to Fe$^{2+}$ or by enzymatic degradation of the siderophore. Siderophores have a wide range of structures (see \ref{fgr:Sids}), possibly so one species can avoid its siderophores being taken up by another species\cite{Seyedsayamdost2012}.
+
+%\begin{figure}[H]
+%	\begin{center}
+%		\schemeref[pyoch]{cmpd:pyoch}
+%		\schemeref[ferri]{cmpd:ferri}
+%		\schemeref[fusar]{cmpd:fusar}
+%		\schemeref[defro]{cmpd:defro}
+%		\schemeref[pyo]{cmpd:pyo}
+%		\schemeref[rhodo]{cmpd:rhodo}
+%		\schemeref[yersin]{cmpd:yersin}
+%		\schemeref[entero]{cmpd:entero}
+%		\includegraphics[scale=1]{Sids}
+%		\caption{Iron-siderophore complexes\cite{Schlegel2006,vanderHelm1980,Hossain1980,Zheng2012,Carrano1978}. \label{fgr:Sids}}
+%	\end{center}
+%\end{figure}
+%
+%\subsection{Sideromycins}
+%
+%
+%Siderophore-antibiotic conjugates are produced naturally by some bacteria and are known as sideromycins\cite{Page2013} (see \ref{fgr:SidMys}). Bacteria produce these molecules to attack other bacteria by hijacking their siderophore uptake mechanisms to introduce toxic compounds. Albomycin \compound{cmpd:albo} (see \ref{fgr:SidMys}) is an example of a sideromycin produced by \textit{Actinomyces subtropicus}\cite{Hartmann1979}. It contains a siderophore coupled to a nuceloside antibiotic using a peptide linker. The siderophore is structurally similar to ferrichrome \compound{cmpd:ferri} (see \ref{fgr:Sids}) and so is taken up by the same transport protein in \textit{E. coli}. The linker is hydrolysed by a protease in the cytoplasm of the \textit{E. coli}, releasing the active nuceloside antibiotic. Resistance to albomycin develops relatively quickly, either due to loss of protease activity or loss of transport system components.
+% 
+%
+%
+%
+%
+%
+%
+%
+%\begin{figure}[H]
+%	\begin{center}
+%		\schemeref[albo]{cmpd:albo}
+%		\schemeref[ferrim]{cmpd:ferrim}
+%		\schemeref[sal]{cmpd:sal}
+%		\includegraphics[scale=1]{SidMys}
+%		\caption{Sideromycins. \label{fgr:SidMys}}
+%	\end{center}
+%\end{figure}
+%
+%\subsection{Synthetic siderophore-antibiotic conjugates}
+%
+%
+%Sideromycins served as inspiration to Ghosh \textit{et al.}\cite{Ghosh1995}, prompting the design, synthesis and biological evaluation of the first synthetic siderophore-antibiotic conjugates using $\beta$-lactam\cite{Mollmann2009,Dini2000,Kline2000}, nucleoside\cite{Lu1999}, glycopeptides\cite{Ghosh1996} and macrolide\cite{Ghosh1995} antibiotics. Fluoroquinolone \compound{cmpd:cip} conjugates with sideromycins have been studied by several groups\cite{Md-Saleh2009,Rivault2007,Ji2012}, including conjugates with linkers which can be cleaved\cite{Rivault2007,Ji2012} in a similar manner to albomycin\cite{Hartmann1979}. Some of these showed comparable activity to the parent antibiotic, but it is not clear whether attachment of the siderophore improved uptake or whether the conjugates acted as classical prodrugs.
+%
+%$\beta$-lactam-sideromycin conjugates have been more widely investigated\cite{Page2013} and show good activity \textit{in vitro}, however, resistance can evolve by loss of the TonB transporter or of the relevant siderophore receptor, e.g. Cir and Fiu for catecholate siderophores or FhuA for hydroxamate siderophores. Initial studies used aminopenicillins and cephems, and recently a conjugate of enterobactin (see \ref{fgr:Sids}) and ampicillin (see \ref{fgr:pen_anas} in \ref{sec:Futpen}) has been shown to have increased activity against pathogenic \textit{E. coli} when compared to native ampicillin\cite{Zheng2014}. Other work has focused on monocyclic $\beta$-lactams, which show high potency against Gram-negative bacteria but low potency against Gram-positive bacteria\cite{Zurenko1990}. Monocyclic $\beta$-lactams are generally fairly stable to $\beta$-lactamase activity, which is an advantage compared with many $\beta$-lactams. 
+%
+%Siderophore-antibiotic conjugates are a promising strategy to deliver antibiotics across bacterial membranes, but it is worth noting that conjugation to a siderophore may lead to loss of activity, or resistance may be acquired by loss of transport proteins. Encouragingly, mutants lacking transport proteins tend to grow more slowly in low-iron conditions, but with an immunocompromised host siderophores may not always be required for infection as bacteria can obtain iron from other sources\cite{Takase2000}. 
+%
+%BAL30072 \compound{cmpd:BAL} (see \ref{fgr:BAL}) is a conjugate of a pyochelin \compound{cmpd:pyoch} (see \ref{fgr:Sids}) analogue and a monocyclic $\beta$-lactam. It is in early clinical trails and appears to have overcome many of the above hurdles as it is a poor substrate for $\beta$-lactamases and resistance due to loss of transport proteins is infrequent\cite{Page2013}. Building on this positive example of an antibiotic conjugate, it is hoped that the approach can be extended to conjugates of antibiotics and QSMs
+%
+%
+%
+%\begin{figure}[H]
+%	\begin{center}
+%		\schemeref[bal]{cmpd:BAL}
+%		\includegraphics[scale=1]{BAL}
+%		\caption{BAL30072 \compound{cmpd:BAL}. \label{fgr:BAL}}
+%	\end{center}
+%\end{figure}
+%
+%
+%
+%\subsection{Quorum sensing molecule-antibiotic conjugates}
+%
+%The success of the siderophore-antibiotic conjugate field lead us to speculate that a similar strategy might be employed with QSMs, leading to QSM-antibiotic conjugates. It is hypothesised that attaching a QSM to a known antibiotic could lead to increased uptake or better localisation of the antibiotic and could restore function in resistant strains. We decided to focus initially on the QSMs synthesised by \textit{P. aeruginosa} due to the low activity of various antibiotics towards it. Ciprofloxacin \compound{cmpd:cip} (see \ref{fgr:cip}) was chosen as the initial antibiotic half as it is often used to treat \textit{P. aeruginosa}\cite{Macgowan1999} but resistance is developing\cite{Su2010}. It is hoped that the quorum sensing molecules will deliver the attached ciprofloxacin into the cell in a 'Trojan horse'/cite{Mollmann2009} approach. This could kill or halt the growth of the bacteria. Alternatively, the bacteria might develop mutations in their quorum sensing machinery to avoid taking up the antibiotics, but this could stop them being able to communicate effectively, therefore decreasing virulence. 
+%We have access to some ciprofloxacin-resistant strains and aim to test the conjugates on them, as well as on susceptible strains, to test whether there is an increase in potency or even a restoration of activity against resistant strains. 
+%
+%
+%\begin{figure}[H]
+%	\begin{center}
+%		\schemeref[cip]{cmpd:cip}
+%		\includegraphics[scale=1]{cip}
+%		\caption{Ciprofloxacin \compound{cmpd:cip}. \label{fgr:cip}}
+%	\end{center}
+%\end{figure}
+%
+%\newpage
+%
+%\section{Aims}
+%
+%The aim of this project is to produce a library of QSM-antibiotic conjugates with the hope of increasing the potency of the drugs and possibly restoring their antibacterial action against resistant strains. The library is built from a collection of \textit{P. aeruginosa} QSM analogues with azide groups attached and a collection of antibiotics with alkyne groups attached. These collections will then be combined using a copper(I)-catalysed azide-alkyne cycloaddition\cite{Tornoe2002,ANIE:ANIE2596} reaction to form the library of final conjugates. This approach has recently been used by Zheng \textit{et al.}\cite{Zheng2014} to join the siderophore enterobactin \compound{cmpd:entero} (see \ref{fgr:Sids}) with ampicillin or amoxicillin (see \ref{fgr:pen_anas} in \ref{sec:Futpen}).
+%
+%\subsection{Quorum sensing molecule-antibiotic conjugates}
+%
+%A copper(I)-catalysed azide-alkyne cycloaddition\cite{Tornoe2002,ANIE:ANIE2596}, commonly referred to as a click reaction although this is a more general term, will be used to join each combination of QSM and antibiotic together (see \ref{sch:QSAB_synth_overv}). This modular approach allows the library to be easily expanded by adding more QMSs or antibiotics, or indeed other groups such as siderophores, fluorescent or affinity tags, or resin beads. The library will then be screened for antibiotic activity against \textit{P. aeruginosa} and other pathogenic bacteria.
+%
+%\begin{scheme}[H]
+%	\begin{center}
+%		\includegraphics[scale=1]{QSAB_synth_overv}
+%		\caption{The proposed construction of the library using a copper(I)-catalysed azide-alkyne cycloaddition. \label{sch:QSAB_synth_overv}}
+%	\end{center}
+%\end{scheme}
+%
+%\subsection{Quorum sensing molecule analogues}
+%
+%The four main QSMs used by \textit{P. auruginosa} are shown in \ref{fgr:PA_QSMs} in \ref{sec:PAQSMs}. 
+%We have decided to focus initially on the synthesis of azido analogues of C$_4$-HSL \compound{cmpd:HL4}, HHQ \compound{cmpd:HHQ} and PQS \compound{cmpd:PQS}. A synthesis of an azido analogue of 3-oxo-C$_12$-HSL \compound{cmpd:HLO12} has also been planned (see \ref{sch:HLO12N3_synth} in \ref{sec:Fut_HLO12}) and will be attempted in due course.
+%
+%The structure-activity relationships in PQS have been previously studied \cite{Hodgkinson2010}, and 5 and 6 positions could be substituted without significantly affecting the activity of the PQS molecule (see \ref{fgr:PQS_num}). Placing of the azide group at position 6 was chosen for synthetic reasons and the azide group was placed in the equivalent position in the HHQ analogue (see \ref{fgr:HHQPQSaz}).
+%
+%Alteration of the lactone group of C$_4$-HSL and other HSL derivatives is known to significantly decrease activity, especially where the number of H-bond donors or acceptors is altered \cite{Galloway2011}. Hence, the azide group will be included on the tail of C$_4$-HSL. Acyl tail length is known to play an important role in affinity, so we have decided to synthesise three analogues of C$_4$-HSL: azido-C$_2$-HSL \compound{cmpd:HL2N3}, azido-C$_4$-HSL \compound{cmpd:HL4N3} and azido-C$_6$-HSL \compound{cmpd:HL6N3} (see \ref{fig:HL_anas}).
+%
+%
+%
+%\begin{figure}[H]
+%	\begin{center}
+%		\schemeref[PQS]{cmpd:PQS}
+%		\includegraphics[scale=1]{PQS_num}
+%		\caption{The atom numbering in PQS \compound{cmpd:PQS}. \label{fgr:PQS_num}}
+%	\end{center}
+%\end{figure}
+%
+%\begin{figure}[H]
+%	\begin{center}
+%		\schemeref[azHHQ]{cmpd:azHHQ}
+%		\schemeref[azPQS]{cmpd:azPQS}
+%		\includegraphics[scale=1]{azHHQPQS}
+%		\caption{The HHQ \compound{cmpd:HHQ} and PQS \compound{cmpd:PQS} analogues \compound{cmpd:azHHQ} and \compound{cmpd:azPQS}. \label{fgr:azHHQPQS}}
+%	\end{center}
+%\end{figure}
+%
+%\begin{figure}[H]
+%	\begin{center}
+%		\schemeref[HL2N3]{cmpd:HL2N3}
+%		\schemeref[HL4N3]{cmpd:HL4N3}
+%		\schemeref[HL6N3]{cmpd:HL6N3}
+%		\includegraphics[scale=1]{HL_anas}
+%		\caption{The C$_4$-HSL \compound{cmpd:HL4} analogues \compound{cmpd:cmpd:HL2N3}, \compound{cmpd:cmpd:HL4N3} and \compound{cmpd:cmpd:HL6N3}. \label{fig:HL_anas}}
+%	\end{center}
+%\end{figure}
+%
+%\subsection{Ciprofloxcin analogues}
+%
+%Ciprofloxacin \compound{cmpd:cip} (see \ref{fgr:cip_num}) is second-generation fluoroquinolone antibiotic used to treat both Gram-positive and Gram-negative bacterial infections\cite{Oliphant2002}.
+%The structure-activity relationships for ciprofloxacin have been investigated \cite{Renau1996} and positions 2 and 7 were found not to cause loss of activity. It was therefore decided that alkyne tails would be added at these positions giving two analogues of ciprofloxacin, \compound{cmpd:hexpipcip} and \compound{cmpd:pipciphex} (see \ref{sch:cip_anas}).
+%
+%\begin{figure}[H]
+%	\begin{center}
+%		\schemeref[cip]{cmpd:cip}
+%		\includegraphics[scale=1]{cip_num}
+%		\caption{The atom numbering in ciprofloxacin \compound{cmpd:cip}. \label{fgr:cip_num}}
+%	\end{center}
+%\end{figure}
+%
+%\begin{figure}[H]
+%	\begin{center}
+%		\schemeref[pipciphex]{cmpd:pipciphex}
+%		\schemeref[hexpipcip]{cmpd:hexpipcip}
+%		\includegraphics[scale=1]{cip_anas}
+%		\caption{The proposed ciprofloxacin analogues \compound{cmpd:hexpipcip} and \compound{cmpd:pipciphex}. \label{sch:cip_anas}}
+%	\end{center}
+%\end{figure}
+%
+%%%%%%
+%
+%%Bacterial resistance to antibiotics is becoming a serious global health threat, and the discovery of new, safe and effective antibiotics is required urgently\cite{ResistanceUS,davies2013drugs,ANIE:ANIE201209979}. A new class of antibiotic, namely sideophore-antibiotic conjugates, has shown promise in initial studies\cite{Page2013}. Siderophores are used by bacteria for iron uptake; attaching an antibiotic to the siderophore can allow the antibiotic to be transported into the cell. 
+%%
+%%We have designed a library of conjugates using a similar approach, but using bacterial quorum sensing molecules\cite{Waters2005} instead of siderophores. Quorum sensing molecules are required for coordination of bacterial behaviours and are involved in the control of swarming, virulence factor production and biofilm formation. We have decided to focus on the quorum sensing molecules produced by \textit{Pseudomonas aeruginosa}\cite{Dubern2008} (see \ref{fgr:PA_QSMs}) as it is a significant human pathogen\cite{Bodey1983} which displays high resistance to many antibiotics\cite{Poole2004}.
+%%
+%%\begin{figure}[H]
+%%	\begin{center}
+%%		\schemeref[HL4]{cmpd:HL4}
+%%		\schemeref[HLO12]{cmpd:HLO12}
+%%		\schemeref[HHQ1]{cmpd:HHQ}
+%%		\schemeref[PQS1]{cmpd:PQS}
+%%		\schemeref[AI2]{cmpd:AI2}
+%%		\includegraphics[scale=1]{PA_QSMs}
+%%		\caption{\textit{P. aeruginosa} quorum sensing molecules. \label{fgr:PA_QSMs}}
+%%	\end{center}
+%%\end{figure}
+%%
+%%A selection of antibiotics (see \ref{fgr:ABs}) will be used, with the aim of testing whether their activities against \textit{P. aeruginosa} and other pathogenic bacteria can be modified by the attachment of a quorum sensing molecule. It is hoped that activity could be restored against antibiotic-resistant strains of bacteria.
+%%
+%%\begin{figure}[H]
+%%	\begin{center}
+%%		\schemeref[Cip]{cmpd:Cip}
+%%		\schemeref[Pen]{cmpd:Pen}
+%%		\schemeref[Tri]{cmpd:Tri}
+%%		\schemeref[Sul]{cmpd:Sul}
+%%		\schemeref[Lin]{cmpd:Lin}
+%%		\includegraphics[scale=1]{ABs}
+%%		\caption{Antibiotics used in the library. \label{fgr:ABs}}
+%%	\end{center}
+%%\end{figure}
+%%
+%%The library is synthesised in two halves which are then coupled together using a copper(I)-catalysed azide-alkyne cycloaddition\cite{Tornoe2002,ANIE:ANIE2596} (see \ref{sch:QSAB_synth_overv}). The antibiotic analogues have terminal alkyne groups attached (see \ref{fgr:YABs}) and the quorum sensing molecule analogues have azide groups attached (see \ref{fgr:azQSMs}). 
+%%
+%%%This modular approach to synthesis allows the library to be easily expanded by adding more QMSs or antibiotics, or indeed other groups such as siderophores, fluorescent or affinity tags, or resin beads. The syntheses of azido analogues of C$_4$-HSL \compound{cmpd:HL4}, HHQ \compound{cmpd:HHQ}, PQS \compound{cmpd:PQS} and PQS \compound{cmpd:PQS} have been completed and the syntheses of analogues of and AI-2 \compound{cmpd:AI2} are in progress (see \ref{fgr:azQSMs}). The syntheses of an alkynyl analogue of ciprofloxacin, penicillin, trimethoprim and sulfanilamide have been completed or are in progress (see \ref{fgr:YABs}). 
+%%
+%%
+%%
+%%\begin{scheme}[H]
+%%	\begin{center}
+%%		\includegraphics[scale=1]{QSAB_synth_overv}
+%%		\caption{The proposed construction of the library using a copper(I)-catalysed azide-alkyne cycloaddition. \label{sch:QSAB_synth_overv}}
+%%	\end{center}
+%%\end{scheme}
+%%
+%%
+%%
+%%\begin{figure}[H]
+%%	\begin{center}
+%%		\includegraphics[scale=1]{YABs}
+%%		\caption{Alkynyl analogues of antibiotics already synthesised or being synthesised in the group. \label{fgr:YABs}}
+%%	\end{center}
+%%\end{figure}
+%%
+%%\begin{figure}[H]
+%%	\begin{center}
+%%		\includegraphics[scale=1]{azQSMs}
+%%		\caption{Azido analogues of quorum sensing molecules already synthesised or being synthesised in the group. \label{fgr:azQSMs}}
+%%	\end{center}
+%%\end{figure}
+%
+%
+%

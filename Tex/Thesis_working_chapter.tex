@@ -1,0 +1,49 @@
+%txs:///pdflatex | txs:///bibtex | txs:///nomenclature | txs:///pdflatex | txs:///pdflatex | txs:///drivebackup | txs:///cleanup
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[off,crop={off},runs={2}]{auto-pst-pdf}
+%\usepackage[crop={on},runs={2}]{auto-pst-pdf}
+
+\usepackage{preamble}
+\usepackage{import}
+\graphicspath{{./figs/}{./figs/eps_manual/}{./figs/eps/}{./figs/nmrs/}}
+
+\begin{document}
+	
+%\import{./}{TitlePage}
+
+\import{./}{CompoundList}
+%\import{./}{Nomenclature}
+
+\tableofcontents
+%\newpage
+
+%\import{./}{Acknowledgements}
+%\import{./}{Abstract}
+
+%\printnomenclature
+%\newpage
+
+%\import{./}{Test}
+
+%\import{./}{Introduction}
+%\import{./}{ResultsAndDiscussion}
+%\import{./}{SN2AlternativeSynthesis}
+%\import{./}{Experimental_general}
+\import{./}{Experimental_1st_year}
+\import{./}{Experimental_triazoles}
+\import{./}{Experimental_AHL_analogue_conjugates}
+%\import{./}{NMRs}
+
+\newpage
+\bibliography{/../library}{}
+\bibliographystyle{Thesis}
+
+
+\end{document}
+
+%Things that needed fixing:
+%Use MikTex
+%Install Strawberry Perl?
+%Update MikTex (uninstall and reinstall graphics)?
