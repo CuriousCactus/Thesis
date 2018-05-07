@@ -770,6 +770,10 @@ FUNCTION {misc}
   format.authors "author" output.check
   new.block
   format.title "title" output.check
+  new.block  
+  type "type" output.check
+  new.block
+  institution "institution" output.check
   new.block
   format.date "year" output.check
   new.block

@@ -1,7 +1,7 @@
 import re
-TFile  = open("Tex\Experimental_AHL_analogue_conjugates.tex", "r")
+
+TFile  = open("Tex\Experimental_1st_year.tex", "r")
 TString = TFile.read()
-#CList = re.findall(r'^(?!%).+(cmpd:[^}]+).+$', TString, flags=re.MULTILINE)
 
 NPList = re.findall(r'^(?!%).+$', TString, flags=re.MULTILINE)
 NPString = "".join(NPList)
