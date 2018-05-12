@@ -6,6 +6,10 @@
 \usepackage{lmodern} \normalfont %to load T1lmr.fd 
 \DeclareFontShape{T1}{lmr}{bx}{sc} { <-> ssub * cmr/bx/sc }{}
 
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
 \linespread{1.3}
 \frenchspacing
 \usepackage{hyphenat}
@@ -26,8 +30,10 @@
 
 \usepackage{bm} %bold maths symbols
 
+%table stuff
 \usepackage{array}
 \floatsetup[table]{style=plain}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}} %centred and middle table alignment
 
 
 \hypersetup{
