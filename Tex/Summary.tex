@@ -2,25 +2,44 @@
 
 \documentclass[10pt,a4paper]{article}
 
-%\usepackage[off,crop={off},runs={2}]{auto-pst-pdf}
-\usepackage[crop={on},runs={2}]{auto-pst-pdf}
+\usepackage[off,crop={off},runs={2}]{auto-pst-pdf}
+%\usepackage[crop={on},runs={2}]{auto-pst-pdf}
 
 \usepackage{preamble}
 \usepackage{import}
 \graphicspath{{./figs/}{./figs/eps_manual/}{./figs/eps/}{./figs/nmrs/}}
 
+\patchcmd{\thebibliography}{\section}{\section*}{}{}
+
+\let\oldbibliography\thebibliography
+\renewcommand{\thebibliography}[1]{%
+  \oldbibliography{#1}%
+  \setlength{\itemsep}{-2.5pt}%
+  %\setlength{\parskip}{-6pt}
+}
+
+\AtBeginEnvironment{thebibliography}{\linespread{1}\selectfont}
+
 \begin{document}
 
 \section*{The synthesis and biological evaluation of a library of autoinducer-antibiotic conjugates}
+
+Bacterial resistance to antibiotics is becoming a serious global health threat, and the discovery of new, safe and effective antibiotics is required urgently\cite{ResistanceUS,davies2013drugs,ANIE:ANIE201209979}. A new class of antibiotic, namely sideophore-antibiotic conjugates, has shown promise in initial studies\cite{Page2013}. Siderophores are used by bacteria for iron uptake, and so attaching antibiotics to them allows the antibiotic to be carried across cell membranes. We have designed conjugates using a similar approach, but using bacterial autoinducers\cite{Waters2005} instead of siderophores. Autoinducers are required for coordination of bacterial behaviours and are involved in the control of swarming, virulence factor production and biofilm formation. 
+
+The library was synthesised in two halves which were then coupled together using either a copper(I)-catalysed azide-alkyne cycloaddition\cite{Tornoe2002,ANIE:ANIE2596} or peptide coupling. It was decided to focus on the autoinducers produced by \textit{Pseudomonas aeruginosa} as it is a significant human pathogen\cite{Bodey1983} which displays high resistance to many antibiotics\cite{Poole2004} and uses quorum sensing to coordinate its group behaviours\cite{Dubern2008}.
+Several conjugates of  C$_4$-HSL derivatives\cite{Galloway2011} were also included, as a thiolactone-antibiotic conjugate has been shown to have increased activity against established biofilms compared with the unmodified antibiotic\cite{Ganguly2011}.
+Autoinducer derivatives were coupled with derivatives of ciprofloxacin or trimethoprim. It is hoped that the autoinducers will deliver the attached antibiotic into the cell, thus potentially increasing its potency or even restoring its efficacy against resistant strains.
+
+Biological testing of the conjugates is in progress, and results will be included in the final thesis.
 	
 \begin{scheme}[H]
 	\begin{center}
 		\includegraphics[scale=1]{Summary_1}
-		\caption{}
+		%\caption{}
 	\end{center}
 \end{scheme}
 
 \bibliography{/../library}{}
-\bibliographystyle{Thesis}
+\bibliographystyle{Thesis_short}
 
 \end{document}
