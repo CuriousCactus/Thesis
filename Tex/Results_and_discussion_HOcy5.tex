@@ -228,26 +228,49 @@ The purification method could probably be optimised, e.g. by varying the solvent
 	\end{center}
 \end{scheme}
 
-\subsubsection{Attaching the linker to ciprofloxacin first\label{sec:CipMe_linker}}
+\subsubsection{Peptide coupling route\label{sec:CipMe_linker}}
 
-Given the side-reactions and low yields associated with the literate synthesis of the S$_N$2 conjugates proposed by Ganguly et. al\cite{Ganguly2011}, an alternative synthesis was investigated, involving building up the linker on the ciprofloxacin side before coupling with the head group (see \ref{sch:HOcy5NH4CipMe_SS_synth}).
+Given the side-reactions and low yields associated with the literate synthesis of the S$_N$2 conjugates proposed by Ganguly et. al\cite{Ganguly2011}, an alternative synthesis was investigated, involving building up the linker on the ciprofloxacin side before coupling with the head group (see \ref{sch:HOcy5NH4_retro_D}).
+
+%This was tested with _RR
 
 \begin{scheme}[H]
 	\begin{center}
-		\schemeref[HOcy5NH2]{cmpd:HOcy5NH2_SS}
+		\schemeref[HOcy5NH2_SS]{cmpd:HOcy5NH2_SS}
+		\schemeref[HOcy5NH2_RR]{cmpd:HOcy5NH2_RR}
 		\schemeref[HOO4CipMe]{cmpd:HOO4CipMe}
 		\schemeref[tBuOO4CipMe]{cmpd:tBuOO4CipMe}
 		\schemeref[tBuOO4Br]{cmpd:tBuOO4Br}
 		\schemeref[CipMe]{cmpd:CipMe}
 		\schemeref[HOcy5NH4CipMe_SS]{cmpd:HOcy5NH4CipMe_SS}
+		\schemeref[HOcy5NH4CipMe_RR]{cmpd:HOcy5NH4CipMe_RR}
 		\includegraphics[scale=1]{HOcy5NH4_retro_D}
-		\caption{Retrosynthesis of the cyclopentyl alcohol-CipMe conjugates (\textit{RR}) \compound{cmpd:HOcy5NH4CipMe_RR} and (\textit{SS}) \compound{cmpd:HOcy5NH4CipMe_SS}. \textit{SS} enantiomers are shown, but both will be synthesised.\label{sch:HOcy5NH4_retro_D}}
+		\caption{Retrosynthesis of the cyclopentyl alcohol-CipMe conjugates  \compound{cmpd:HOcy5NH4CipMe_SS} (\textit{SS}) and \compound{cmpd:HOcy5NH4CipMe_RR} (\textit{RR}). \textit{SS} enantiomers are shown, but both will be synthesised.\label{sch:HOcy5NH4_retro_D}}
 	\end{center}
 \end{scheme}
 
+%a
+The first step of the synthesis was an S$_N$2 reaction between Boc-protected 4-bromobutyric acid \compound{cmpd:tBuOO4Br} methyl ciprofloxacin \compound{cmpd:CipMe} (see \ref{sch:HOcy5NH4CipMe_RR_synth}). This reaction used fairly harsh conditions (16 h at 100 $^{\circ}$C), but early on in the synthesis before the head group was installed. Hence the possibility of side reactions between the bromide and the amine was removed. Intermediate \compound{cmpd:tBuOO4CipMe} was obtained in acceptable yield after column chromatography (49.9 \%).
+%b
+Intermediate \compound{cmpd:tBuOO4CipMe} was deprotected in excellent yield using TFA in \ce{CH2Cl2} to give carboxylic acid \compound{cmpd:HOO4CipMe}. Scale-up of this reaction allowed the easy synthesis of 600 mg of this useful intermediate, which can be coupled with various amine head-groups to create a library.
+%c
+Carboxylic acid \compound{cmpd:HOO4CipMe} was first coupled with (1\textit{R},2\textit{R})-2-aminocyclopentan-1-ol \compound{cmpd:HOcy5NH2_RR} using standard peptide coupling conditions to give cyclopentyl alcohol-CipMe conjugate \compound{cmpd:HOcy5NH4CipMe_RR}. Purification by column chromatography was attempted twice with poor results, before moving on to using preparative HPLC, which gave \compound{cmpd:HOcy5NH4CipMe_RR} cleanly in 38.7 \% yield.
+Coupling was also performed with (1\textit{S},2\textit{S})-2-aminocyclopentan-1-ol \compound{cmpd:HOcy5NH2_SS} to give the enantiomer \compound{cmpd:HOcy5NH4CipMe_SS} in 54.7 \% yield.
 
+Direct comparisons of routes are not possible without repeating syntheses using this new method, but if it is assumed that peptide coupling of homocysteine thiolactone hydrochloride \compound{cmpd:SHLHCl} to carboxylic acid \compound{cmpd:HOO4CipMe} would have a similar yield to the coupling with (1\textit{R},2\textit{R})-2-aminocyclopentan-1-ol \compound{cmpd:HOcy5NH2_RR}, approximate comparisons can be made.
+The synthesis described in \ref{sec:HCTL} has an overall yield of 10.7 \%, whereas the route shown in \ref{sch:HOcy5NH4CipMe_RR_synth} for \compound{cmpd:HOcy5NH4CipMe_SS} has an overall yield of 26.1 \%. Moreover, if the yield starting from the head group (which may be expensive, difficult to synthesise and/or unstable) is considered, the yield is 54.7 \% vs. 10.7 \%.
+Therefore, this route is recommended for further investigation if the library is to be expanded.
 
-\subsubsubsection{Synthesis of methyl-protected ciprofloxacin with linker with terminal carboxylate}
+A downside to this route is that it cannot branch towards the triazole-coupled library in the same way that the route in \ref{sec:HCTL}. A carboxylic acid intermediate with a triazole in the chain could presumably be synthesised, but this would be rather pointless given that the triazole library was initially proposed so that the two sides could be joined by the 'click' reaction.
+Therefore, an alternative route to the azide was proposed, via a more stable chloride intermediate (see \ref{sec:Cl4Cl}).
+
+%From head
+%87.9*12.2=10.7
+%38.7
+%longest route
+%87.9*12.2=10.7
+%49.9*95.6*54.7=26.1
+Onto click
 
 \begin{scheme}[H]
 	\begin{center}
@@ -255,14 +278,19 @@ Given the side-reactions and low yields associated with the literate synthesis o
 		\schemeref[tBuOO4Br]{cmpd:tBuOO4Br}
 		\schemeref[tBuOO4CipMe]{cmpd:tBuOO4CipMe}
 		\schemeref[HOO4CipMe]{cmpd:HOO4CipMeTFA}
-		\schemeref[HOcy5NH2]{cmpd:HOcy5NH2_SS}
+		\schemeref[HOcy5NH2_SS]{cmpd:HOcy5NH2_SS}
+		\schemeref[HOcy5NH2_RR]{cmpd:HOcy5NH2_RR}
 		\schemeref[HOcy5NH4CipMe_SS]{cmpd:HOcy5NH4CipMe_SS}
-		\includegraphics[scale=1]{HOcy5NH4CipMe_SS_synth}
-		\caption{Synthesis of \compound{cmpd:HOcy5NH4CipMe_SS}. 
-			a) NaI, TEA, MeCN, 100oC, 16h, 50 \%. %, LMO-2-081
-			b) TFA,  CH2Cl2, r.t., 18h, 96 \%. %, LMO-2-083. 
-			c) EDC, HOBt, DIPEA, DMF, 35 \%. %, LMO-2-093
-			\label{sch:HOcy5NH4CipMe_SS_synth}}
+		\schemeref[HOcy5NH4CipMe_RR]{cmpd:HOcy5NH4CipMe_RR}
+		\includegraphics[scale=1]{HOcy5NH4CipMe_RR_synth}
+		\caption{Synthesis of the cyclopentyl alcohol-CipMe conjugates  \compound{cmpd:HOcy5NH4CipMe_SS} (\textit{SS}) and \compound{cmpd:HOcy5NH4CipMe_RR} (\textit{RR}) by peptide coupling. 
+		\textit{SS} enantiomers are shown, but both were synthesised.
+			a) NaI, TEA, acetonitrile, 100 $^{\circ}$C, 16 h, 49.9 \%. %, LMO-2-081
+			b) TFA,  \ce{CH2Cl2}, r.t., 18 h, 95.6 \%. %, LMO-2-083. 
+			c) EDC, HOBt, DIPEA, DMF, r.t., 16 h, 
+			54.7 \% (\textit{SS}),  %LMO-3-019
+			38.7 \% (\textit{RR}). %LMO-2-093
+			\label{sch:HOcy5NH4CipMe_RR_synth}}
 	\end{center}
 \end{scheme}
 
