@@ -1,4 +1,6 @@
-\subsection{Inspiration}
+\subsection{Introduction}
+
+\subsubsection{Inspiration}
 
 Following on from the library of compounds based on \textit{P. aeruginosa} autoinducers, a series of conjugates based on \textit{analogues} of C$_4$-HSL were planned. This strategy was inspired by a paper\cite{Ganguly2011} and patent\cite{Iyer2012} by Ganguly et al., who synthesised and characterised a conjugate \compound{cmpd:SHL4CipMe} of methyl ciprofloxacin with homocysteine thiolactone (see \ref{fig:SHL4CipMe}). Homocysteine thiolactone is an analogue of homoserine lactone with the ring oxygen replaced by sulfur, and has been used as the head group in several other known quorum sensing modulators\cite{Eberhard1986,Schaefer1996,Passador1996,Smith2003,Chhabra1993,McInnis2011,Geske2007,Janssens2007}.\todo{show compounds it's in and describe?}
 
@@ -44,11 +46,12 @@ It was therefore decided to build on this work by synthesising a series of cipro
 
 
 
-\subsection{Library design}
+\subsubsection{Head groups}
 
+The activity of the chosen head groups against \textit{P. aeruginosa} receptors when coupled with the native C$_4$ and 3-oxo-C$_12$ tails is summarised in \ref{tbl:head_groups}. It is speculated that high activity of these molecules should correlate with high activity of their ciprofloxacin conjugates.
+This is not a comprehensive list of active head groups, and other possible choices are covered in \ref{sec:future}.
 
-Discuss which AHL analogues were picked + why.
-Might as well make other enan of HOcy5
+The exact head groups studied herein are shown in \ref{fig:head_groups}. The cyclohexanol derivatives were synthesised as a diastereomerically pure racemate, whereas the cyclopentanol derivatives were synthesised as separate enantiomers. Unfortuantely, cyclopentanone derivatives were not synthesised, and would be an obvious future addition to the library. The 2-methoxybenzene derivatives do not have precedents as quorum sensing modulators in the literature, but they were included so as to be compared with the 3-methoxybenzene derivatives.
 
 \todo{check Boursier2018 for print publication details}
 
@@ -64,14 +67,14 @@ Might as well make other enan of HOcy5
  %L vs racemate doesn't matter \cite{McInnis2011} D might actually do better?
  %check receptor. hydrolytic stability is higher for SHL. is it racemic in Ganguly?
  %Some evidence that \textit{R} enantiomer is more potent\cite{McInnis2011}.
-\hline 
- \vspace{5px}\includegraphics[scale=1]{2MeOA_head} 
- & Not yet studied 
- & Not yet studied \\  
+%\hline 
+% \vspace{5px}\includegraphics[scale=1]{2MeOA_head} 
+% & Not yet studied. 
+% & Not yet studied. \\  
 \hline 
  \vspace{5px}\includegraphics[scale=1]{3MeOA_head} 
- & Partial agonist\cite{Hodgkinson2012a} 
- & Strong antagonist\cite{Hodgkinson2012a} \\ 
+ & Partial agonist against LasR\cite{Hodgkinson2012a}. 
+ & Strong antagonist against LasR\cite{Hodgkinson2012a}. \\ 
 \hline 
  \vspace{5px}\includegraphics[scale=1]{HOcy5_S_head} 
  & Poor agonist and antagonist against RhlR\cite{Smith2003a,Jog2006}.
@@ -90,20 +93,30 @@ Might as well make other enan of HOcy5
  & Partial antagonist against LasR\cite{Smith2003a}. Shown to reduce biofilm formation in \textit{P. aeruginosa}\cite{Smith2003a}.\\ 
 \hline 
 \end{tabular}
-\caption{Click reactions attempted.\label{tbl:Clicks_AHLs_Cip}} 
+\caption{Activities of autoinducers containing the chosen head groups when coupled with C$_4$ or 3-oxo-C$_12$ tails.\label{tbl:head_groups}} 
 \end{table}
 
-Introduce initial strategy of making bromide then azide, and diverting down the two different paths to make directly linked or triazole linked products.
-
 \begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=1]{head_groups}
+		\caption{The head groups used in this section.\label{fig:head_groups}}
+	\end{center}
+\end{figure}
+
+\subsubsection{Linkers}
+
+As Ganguly et al.\cite{Ganguly2001} synthesised their conjugate from Br-C$_4$-HCTL, it was envisaged that a branching strategy could be used to produce two sets of conjugates (see \ref{sch:branching_synth_general}). The first set would be formed by the S$_N$2 reaction of the relevant bromide with methyl ciprofloxacin. The second set would be made by displacing the bromide with azide, then performing a click reaction with the alkynyl ciprofloxacin derivative \compound{cmpd:Y4Cip} made previously to form the triazole-linked product. Ketone conjugates would be formed by oxidation of the alcohols.
+
+\begin{scheme}[H]
 	\begin{center}
 		\includegraphics[scale=1]{branching_synth_general}
 		\caption{\label{sch:branching_synth_general}}
 	\end{center}
-\end{figure}
+\end{scheme}
 
 \subsection{Synthesis of the homocysteine thiolactone derivatives\label{sec:HCTL}}
 
+The synthesis of the analogue conjugates began with the synthesis of methyl ciprofloxacin \compound{cmpd:CipMe}, which would then be attached to the various head groups.
 Methyl ciprofloxacin \compound{cmpd:CipMe} was synthesised from ciprofloxacin \compound{cmpd:Cip} and MeOH in very good yield using \textit{para}-toluenesulfonic acid as a catalyst \cite{Sachin2010}.
 
 \begin{scheme}[H]
@@ -115,6 +128,7 @@ Methyl ciprofloxacin \compound{cmpd:CipMe} was synthesised from ciprofloxacin \c
 	\end{center}
 \end{scheme}
 
+The HCTL head group was then attached to the linker to form Br-C$_4$-HCTL \compound{cmpd:SHL4Br}, in preparation for coupling to methyl ciprofloxacin \compound{cmpd:CipMe}.
 Br-C$_4$-HCTL \compound{cmpd:SHL4Br} was synthesised using the Schotten-Baumann conditions employed previously for the HSL derivatives \compound{cmpd:HL4Br} and \compound{cmpd:HL6Br}. Br-C$_4$-HCTL \compound{cmpd:SHL4Br} was isolated in markedly higher yield than that achieved by Ganguly \textit{et al.}\cite{Ganguly2011} (87.9 \% vs. 25.0 \%). It is possible that this was due to \ce{CH2Cl2} being used for the extraction, whereas Ganguly \textit{et al.} used EtOAc.
 
 \begin{scheme}[H]
