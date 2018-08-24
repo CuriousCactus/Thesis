@@ -207,22 +207,16 @@ Many of these bacteria are significant causes of disease and death in humans, fo
 
 \subsubsection{\textit{Pseudomonas aeruginosa}\label{sec:PA}}
 
-One of the most well-studied examples of QS is in \textit{P. aeruginosa}.
+One of the most well-studied examples of quorum sensing is in \textit{P. aeruginosa}.
 \textit{P. aeruginosa} is a Gram-negative opportunistic pathogen which typically infects immunocompromised individuals such as those with cystic fibrosis, neutropenia and AIDS. It can infect the pulmonary and urinary tracts as well being the most frequent cause of burn wound infections and the most frequent conloniser of medical devices such as catheters\cite{Bodey1983}.
 
-\textit{P. aeruginosa} uses quorum sensing (QS) to coordinate biofilm formation, swarming motility and virulence. The autoinducers used by \textit{P. aeruginosa} are shown in \ref{fgr:PA_autoinducers} (HHQ \compound{cmpd:HHQ} is a precursor to PQS \compound{cmpd:PQS} but can bind to its receptor, PQSr, and hence can act as a autoinducer\cite{Xiao2006}). QS in \textit{P. aeruginosa} involves a complex interplay of the four signalling molecules and various proteins (see \ref{fgr:PA_QS})\cite{Dubern2008}. QS regulates the production of virulence factors including elastase, alkaline protease, exotoxin A, rhamnolipids, pyocyanin, lectins and superoxide dismutases, as well as regulating biofilm formation.
+\textit{P. aeruginosa} has a low susceptibility to many antibiotics and readily acquires antibiotic resistance by mutation or horizontal gene transfer\cite{cornelis2008pseudomonas}.
+It is difficult for antibiotics to cross into cells due to low cell membrane permeability\cite{Nikaido1989} and biofilm formation\cite{Evans1991}, and they are pumped out again by its multiple chromosomally encoded multidrug efflux pumps\cite{Poole2004}.
+\textit{P. aeruginosa} biofilms are more resistant to many drugs including ciprofloxacin \compound{cmpd:Cip} and trimethoprim \compound{cmpd:Tri} compared with planktonic cells\cite{Evans1991,Olson2002}.
+This high level of antibiotic resistance makes \textit{P. aeruginosa} an important target for drug discovery.
 
-\textit{P. aeruginosa} has a low susceptibility to many antibiotics due to its chromosomally encoded multidrug efflux pumps: mexAB and mexXY\cite{Poole2004}. It is also difficult for drugs to cross into cells due to low cell wall permeability and biofilm formation. \textit{P. aeruginosa} may also acquire antibiotic resistance by mutation or horizontal gene transfer\cite{cornelis2008pseudomonas}. This high level of antibiotic resistance makes \textit{P. aeruginosa} an important target for drug discovery.
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=\textwidth]{PAQS_full}
-		\caption{Quorum sensing in \textit{P. aeruginosa}\cite{Dubern2008}. \label{fgr:PA_QS}}
-	\end{center}
-\end{figure}
-
-%ideally save as tiff then convert to png
-\todo{add biofilm to diagram, late and early development Sauer2002,Davies1998}
+\textit{P. aeruginosa} uses quorum sensing to coordinate biofilm formation, swarming motility and virulence\cite{Guo2014,Dubern2008}. 
+The autoinducers used by \textit{P. aeruginosa} are shown in \ref{fgr:PA_autoinducers}.
 
 \begin{figure}[H]
 	\begin{center}
@@ -236,6 +230,72 @@ One of the most well-studied examples of QS is in \textit{P. aeruginosa}.
 	\end{center}
 \end{figure}
 
+Quorum sensing in \textit{P. aeruginosa} involves a complex interplay of five signalling molecules and various proteins (see \ref{fgr:PA_QS})\cite{Dubern2008,Hodgkinson2011,Jimenez2012}.
+These can be broken down into three main, interacting systems: Las, Rhl and Pqs.
+
+In the Las system, LasI synthesises 3-oxo-C$_{12}$-HSL \compound{cmpd:HLO12} as its autoinducer. 3-oxo-C$_{12}$-HSL \compound{cmpd:HLO12} binds LasR, and this complex upregulates LasI production (thus causing autoinduction) as well as genes producing elastase, LasA protease, alkaline protease and exotoxin A \cite{Gambello1993}, and the Rhl and Pqs systems.
+
+In the Rhl system, RhlI synthesises C$_4$-HSL \compound{cmpd:HL4} as its autoinducer. C$_4$-HSL \compound{cmpd:HL4} binds RhlR, and this complex upregulates RhlI production (thus causing autoinduction). Production of both RhlR and RhlI is also upregulated by the LasR complex, and so the Las system has control over the Rhl system. The RhlR complex also upregulates genes involved in the production of pyocyanin, elastase, rhamnolipids\cite{Hassett1999}, LecA, HCN and alkaline proteases\cite{blah}.
+
+In the Pqs system, the main autoinducer, PQS \compound{cmpd:PQS}, is synthesised by enzymes encoded by multiple gene clusters. The \textit{pqsABCDE}\cite{Drees2015,Lin2018} and \textit{phnAB}\cite{Farrow2007} clusters produce enzymes responsible for the synthesis of the precursor HHQ \compound{cmpd:HHQ}, and PqsH converts HHQ \compound{cmpd:HHQ} to PQS \compound{cmpd:PQS}. 
+PQS \compound{cmpd:PQS} or HHQ \compound{cmpd:HHQ} binds PqsR\cite{Xiao2006}, and this complex upregulates the synthesis of HHQ \compound{cmpd:HHQ}, as well as RhlR, so the Pqs system has control over the Rhl system.
+Production of both PqsR and PqsH is also upregulated by the LasR complex, and so the Las system has control over the Pqs system.
+The PqsR complex can also upregulate the production of blah\cite{blah}.
+
+Add AI2\cite{Li2015a,Li2017} Increases biofilm and virulence by joining in with las/rhl, exact mechanism not known
+
+Basically it's all very complicated.
+Autoinducers needed for important behaviours.
+
+
+%Hassett1999
+%Genes or proteins under control of LasR: the second tier %(alphabetical). apr, encoding alkaline protease (Gambello et al., 1993);
+%fagA±fumC±orfX±sodA operon, with the ®nal gene encoding Mn-SOD (this study); 
+%haemolysin (Lati® et al., 1996); 
+%katA , encoding KatA (thisstudy); 
+%%lasA , encoding a staphylolytic protease (Lati® et al., 1996); 
+%%lasB, encoding elastase (Passad or et al., 1993); 
+%%lasI, encoding LasI, aprotein that catalyses the synthesis of PAI-1 from acyl±acyl carrier proteins and S-adenosylmethionine (Pesci et al., 1997); 
+%%rhlR encodingRhlR, the second QS transactivator (Ochsner and Reiser, 1995); 
+%twitching motility (Glessner et al., 1999; Suh et al., 1999); 
+%%toxA , encodingexotoxin A (Gambello et al., 1993); 
+%xcpP±xcpR (Chapon-Herve et al., 1997).
+%
+%Genes or proteins under the control of RhlR: the third tier (alpha betical). 
+%Chitinase (Winson et al., 1995); 
+%katA (this study); 
+%%%lasB (Brint andOhman, 1995); 
+%lipase (Reimmann et al., 1997); 
+%%%pyocyanin (Brint and Ohman, 1995 , p. 1402); 
+%%%rhlAB, encoding a rhamnosyltransferaseinvolved in the synthesis of the rhamnolipid surfactant; 
+%%%rhlI, encoding RhlI, a protein that catalyses the synthesis of PAI-2 from acyl±acylcarrier proteins and S-adenosylmethionine (Pesci et al., 1997); 
+%sodB, encoding Fe-SOD (potentially indirect control as indicated by `otherfactors?' in ®gure, this study); 
+%xcpP-xcpR (Chapon-Herve et al., 1997).
+%LecA,HCN,alkaline proteases
+%
+%
+%Many genes involved in the synthesis of virulence- related factors and toxic products, such as hydrogen cyanide (hcnABC), chitinase (chiC), lectins (lecA and lecB) and putative secondary metabolites (PA2274, PA4078), exhibit reduced activation (or transcriptional repression) in the mvfR mutant, at the stationary growth phases (Table 1 and Fig. 4C).
+%Deziel2005
+%
+%
+%
+%
+%\todo{add biofilm to diagram, late and early development Sauer2002,Davies1998,Dubern2008}
+%PQS early biofilm\cite{Diggle2003,Hodgkinson2011}
+%
+%%Vfr\cite{Albus1997}
+
+
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=\textwidth]{PAQS_full}
+		\caption{Quorum sensing in \textit{P. aeruginosa}\cite{Dubern2008}. \label{fgr:PA_QS}}
+	\end{center}
+\end{figure}
+\todo{add numbers manually when sorted}
+
+%ideally save as tiff then convert to png
 
 
 
@@ -381,9 +441,9 @@ It is expected that MexAB-OprM upregulation would also disrupt biofilm formation
 Ciprofloxacin \compound{cmpd:Cip} and trimethoprim \compound{cmpd:Tri} (see \ref{fgr:ABs}) were chosen as the antibiotic sides of the conjugates.
  
 Ciprofloxacin \compound{cmpd:Cip} is second-generation fluoroquinolone antibiotic used to treat both Gram-positive and Gram-negative bacterial infections including \textit{P. aeruginosa}\cite{Oliphant2002,Macgowan1999}.
-%\textit{P. aeruginosa} biofilms are more resistant to ciprofloxacin \compound{cmpd:Cip} than planktonic cells\cite{Evans1991}.
 
-Trimethoprim (see \ref{fgr:ABs}) is a dihydrofolate reductase inhibitor used primarily to treat bladder infections\cite{Brogden1982}. It is active against several significant human pathogens including \textit{Streptococcus pneumoniae} and \textit{Haemophilus influenzae}, but not against \textit{P. aeruginosa}. It was primarily chosen in this study as it was considered easy to functionalise, but to test the feasibility of creating antibiotic activity against \textit{P. aeruginosa}.
+
+Trimethoprim (see \ref{fgr:ABs}) is a dihydrofolate reductase inhibitor used primarily to treat bladder infections\cite{Brogden1982}. It is active against several significant human pathogens including \textit{Streptococcus pneumoniae} and \textit{Haemophilus influenzae}, but not against \textit{P. aeruginosa}. It was primarily chosen in this study as it was considered easy to functionalise, but also to test the feasibility of creating antibiotic activity against \textit{P. aeruginosa}.
 
 \begin{figure}[H]
 	\begin{center}
@@ -394,11 +454,7 @@ Trimethoprim (see \ref{fgr:ABs}) is a dihydrofolate reductase inhibitor used pri
 	\end{center}
 \end{figure}
 
-%, and this difference is more pronounced at high growth rates\cite{Evans1991}.
-%In addition, the resistance of intact biofilms is significantly higher than that of resuspended biofilm cells, suggesting that organization of the cells within the biofilm confers resistance\cite{Evans1991}. 
-%However, there are conflicting reports on whether \textit{P. aeruginosa} biofilms impede the diffusion of ciprofloxacin\cite{Suci1994,Shigeta1997,Kumon1994}, and regardless it has been shown that limited antibiotic diffusion through the biofilm is not the primary mechanism of resistance of \textit{P. aeruginosa} biofilms against ciprofloxacin \compound{cmpd:Cip}\cite{Walters2003}.
-%Instead it is likely that poor oxygen penetration and low metabolic activity within the interior of the biofilm is responsible for the low antibiotic activity.
-%This is expected for ciprofloxacin \compound{cmpd:Cip}, as it works by inhibiting DNA gyrase and topoisomerase IV, thereby inhibiting cell division.
+
 
 \subsubsection{Antibiotic efflux}
 
@@ -615,3 +671,8 @@ This is not a comprehensive list of active head groups, and other possible choic
 %	\end{center}
 %\end{figure}
 %
+%, and this difference is more pronounced at high growth rates\cite{Evans1991}.
+%In addition, the resistance of intact biofilms is significantly higher than that of resuspended biofilm cells, suggesting that organization of the cells within the biofilm confers resistance\cite{Evans1991}. 
+%However, there are conflicting reports on whether \textit{P. aeruginosa} biofilms impede the diffusion of ciprofloxacin\cite{Suci1994,Shigeta1997,Kumon1994}, and regardless it has been shown that limited antibiotic diffusion through the biofilm is not the primary mechanism of resistance of \textit{P. aeruginosa} biofilms against ciprofloxacin \compound{cmpd:Cip}\cite{Walters2003}.
+%Instead it is likely that poor oxygen penetration and low metabolic activity within the interior of the biofilm is responsible for the low antibiotic activity.
+%This is expected for ciprofloxacin \compound{cmpd:Cip}, as it works by inhibiting DNA gyrase and topoisomerase IV, thereby inhibiting cell division.
