@@ -554,7 +554,6 @@ FUNCTION {article}
   crossref missing$
     { journal emphasize "journal" output.check
       format.vol.num.pages output
-	  new.block
       format.date "year" output.check
     }
     { format.article.crossref output.nonnull
@@ -577,7 +576,9 @@ FUNCTION {book}
       if$
     }
   if$
+  new.block
   format.btitle "title" output.check
+  new.block
   crossref missing$
     { format.bvolume output
       %new.block
@@ -591,7 +592,6 @@ FUNCTION {book}
     }
   if$
   format.edition output
-  new.block
   format.date "year" output.check
   new.block
   note output
@@ -757,7 +757,6 @@ FUNCTION {mastersthesis}
   "Master's thesis" format.thesis.type output.nonnull
   school "school" output.check
   address output
-  new.block
   format.date "year" output.check
   new.block
   note output
@@ -792,7 +791,6 @@ FUNCTION {phdthesis}
   "PhD thesis" format.thesis.type output.nonnull
   school "school" output.check
   address output
-  new.block
   format.date "year" output.check
   new.block
   note output
