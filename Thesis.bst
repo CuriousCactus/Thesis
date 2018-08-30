@@ -773,7 +773,6 @@ FUNCTION {misc}
   type "type" output.check
   new.block
   institution "institution" output.check
-  new.block
   format.date "year" output.check
   new.block
   note output
