@@ -169,9 +169,48 @@ Building on these positive examples, it is hoped that the strategy of conjugatin
 
 \subsection{Autoinducer-antibiotic conjugates\label{sec:AIABs}}
 
+This study extends the conjugation strategy discussed above by creating autoinducer-antibiotic conjugates. It was hypothesised that attaching an autoinducer to a known antibiotic could lead to increased cellular retention of the antibiotic, and could potentially restore function against resistant strains. This is thought to be the first large study of autoinducer-antibiotic conjugates, with only one such molecule having been reported previously\cite{Ganguly2011} (see below).
 
-This study extends the conjugation strategy discussed above by creating autoinducer-antibiotic conjugates. It was hypothesised that attaching an autoinducer to a known antibiotic could lead to increased cellular retention of the antibiotic, and could potentially restore function against resistant strains. This is thought to be the first large study of autoinducer-antibiotic conjugates, with only one such molecule having been reported previously\cite{Ganguly2011} (see \ref{sec:AIA_intro}).
-This section begins by introducing the concept of quorum sensing, followed by discussion of the autoinducers and antibiotics used in this study and the mechanisms of their efflux from \textit{P. aeruginosa} cells, and how these mechanisms could be exploited by conjugates.
+\subsubsection{Previous work on conjugates\label{sec:prev}}
+
+This strategy was inspired by a paper\cite{Ganguly2011} and patent\cite{Iyer2012} by Ganguly \textit{et al.}, who synthesised and characterised a conjugate \compound{cmpd:SHL4CipMe} of methyl ciprofloxacin with homocysteine thiolactone (see \ref{fgr:SHL4CipMe}). Homocysteine thiolactone is an analogue of homoserine lactone with the ring oxygen replaced by sulfur, and has been used as the head group in several other known quorum sensing modulators\cite{Eberhard1986,Schaefer1996,Passador1996,Smith2003,Chhabra1993,McInnis2011,Geske2007,Janssens2007}.
+
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=1]{SHL4CipMe}
+		\caption{The HCTL-CipMe conjugate \compound{cmpd:SHL4CipMe} studied by Ganguly \textit{et al.}\cite{Ganguly2011,Iyer2012}.\label{fgr:SHL4CipMe}}
+	\end{center}
+\end{figure}
+
+
+As part of their characterisation of the HCTL-CipMe conjugate \compound{cmpd:SHL4CipMe}, Ganguly \textit{et al.} found the minimum inhibitory concentration (MIC) of the conjugate in \textit{P. aeruginosa} under standard planktonic conditions. 
+The MIC was found to be ten times higher for the conjugate vs. ciprofloxacin (50 vs. 5 $\mu$m), indicating that the conjgate was less effective than ciprofloxacin under planktonic conditions. 
+
+Ganguly \textit{et al.} then investigated the effect of the conjugate on biofilms. 
+The conjugate and ciprofloxacin were first added to dilute \textit{P. aeruginosa} liquid culture at 25 $\mu$m. 
+As expected, the culture failed to grow and form biofilm in the presence of ciprofloxacin, but did grow in the presence of the conjugate \compound{cmpd:SHL4CipMe}. 
+They then incubated cultures for 24 h, to allow biofilms to grow, before adding the compounds. In contrast, they found that the conjugate \compound{cmpd:SHL4CipMe} disrupted the biofilm more effectively than ciprofloxacin. 
+When the biofilm was grown for 48 or 72 hours the conjugate had similarly disruptive effects, whereas ciprofloxacin `did not show any significant antibacterial activity'.
+
+These results are exciting as they hint that an autoinducer conjugate might be able to combat an established \textit{P. aeruginosa} infection more effectively than the unmodified antibiotic. 
+Ganguly \textit{et al.} suggest that their conjugate is more effective than ciprofloxacin in penetrating biofilms, and/or better at avoiding being pumped out by multidrug efflux pumps. They posit that this could be due to the thiolactone head, as they also showed that unconjugated C$_4$-HCTL \compound{cmpd:SHL4} (see \ref{fgr:HL_SHL}) has `either enhanced uptake or functional activity' when compared with C$_4$-HSL \compound{cmpd:HL4}. 
+
+It is possible that the conjugate \compound{cmpd:SHL4CipMe} has higher activity against biofilms when compared with ciprofloxacin \compound{cmpd:Cip} because the conjugate \compound{cmpd:SHL4CipMe} avoids being pumped out by multidrug efflux pumps, or selects for the survival of mutants with upregulated efflux pumps, and hence disrupts quorum sensing systems (see \ref{sec:conj_eff}).
+
+While one might expect the conjugate \compound{cmpd:SHL4CipMe} to behave like C$_4$-HSL \compound{cmpd:HL4}, and hence passively diffuse in and out of cells, it is possible that its transport more closely resembles that of 3-oxo-C$_{12}$-HSL \compound{cmpd:HLO12}. 3-oxo-C$_{12}$-HSL \compound{cmpd:HLO12}'s accumulation in membranes and interaction with efflux pumps is thought to be based primarily on tail chain length\cite{Pearson1999}, and the ciprofloxacin half of the conjugate \compound{cmpd:SHL4CipMe} could be seen as a long tail, especially as the carboxylic acid is methylated and hence less polar.
+
+\begin{figure}[H]
+	\begin{center}
+		\schemeref[HL4]{cmpd:HL4}
+		\schemeref[SHL4]{cmpd:SHL4}
+		\includegraphics[scale=1]{HL_SHL}
+		\caption{
+		C$_4$-HSL \compound{cmpd:HL4} and C$_4$-HCTL \compound{cmpd:SHL4}. Note that Ganguly \textit{et al.} tested the \textit{S} enantiomer of C$_4$-HCTL \compound{cmpd:SHL4}, but used a racemic mixture in their HCTL-CipMe conjugate. %Ikeda2001
+		\label{fgr:HL_SHL}}
+	\end{center}
+\end{figure}
+
 
 
 \subsubsection{Quorum sensing\label{sec:QS}}
@@ -183,6 +222,8 @@ The process by which bacteria determine the concentration of similar bacteria in
 
 Quorum sensing has been observed in many species of bacteria, including \textit{Vibrio fischeri}, \textit{P. aeruginosa}, \textit{Agrobacterium tumefaciens}, \textit{Erwinia carotovora}, \textit{Streptococcus pneumoniae}, \textit{Bacillus subtilis}, \textit{Staphylococcus aureus}, \textit{Vibrio harveyi}, \textit{Escherichia coli}, \textit{Myxococcus xanthus}, \textit{Salmonella enterica}, \textit{Yersinia enterocolitica}, \textit{Aeromonas sp.} and \textit{Acinetobacter sp.}\cite{Miller2001,Fuqua1994,Waters2005,Atkinson2006,Chan2011,Sauer2002,Michael2001,Ahmer2004,Nealson1970,Visick2006}. 
 Many of these bacteria are significant causes of disease and death in humans, for example, in a typical year in the U.S. \textit{P. aeruginosa} causes 6,700 multidrug-resistant infections and 440 deaths, methicillin-resistant \textit{S. aureus} causes 80,500 severe infections and 11,300 deaths and non-typhoidal \textit{Salmonella} causes 1.2 million illnesses, 23,000 hospitalisations and 450 deaths\cite{ResistanceUS}.
+
+
 
 \subsubsubsection{\textit{Vibrio fischeri}}
 
@@ -296,15 +337,22 @@ In summary, \textit{P. aeruginosa} uses the autoinducers shown in \ref{fgr:PA_au
 %Rampioni RsaL inhibits HCN and pyocyanin
 %%Vfr\cite{Albus1997}
 
-\subsubsection{Autoinducers}
 
-Quorum sensing has been sucessfully targeted using many different modulators\cite{Galloway2011,Hodgkinson2011}, but this study takes a slightly different approach. 
-Inspired by the success of various siderophore-antibiotic conjugates (see \ref{sec:synthsidABs}), a library of autoinducer-antibiotic conjugates was synthesised to test the hypothesis that the importance of autoinducers in harmful cellular behaviours could lead to increased activity of the conjugates (see \ref{sec:AIABs}).
+
+\newpage
+
+\section{Project aims and design}
+
+The aim of this project is to produce and test a library of autoinducer-antibiotic conjugates with the goal of producing conjugates with greater potency than the parent antibiotics.
+The work is divided into two main sections. 
+Section \ref{sec:AACs} focuses on conjugates of three \textit{P. aeruginosa} autoinducers (see \ref{fgr:PA_autoinducers}) with ciprofloxacin and trimethoprim (see \ref{fgr:ABs}) joined using a copper(I)-catalyzed azide-alkyne cycloaddition.
+Section \ref{sec:HSLCipCs} focuses on conjugates of homoserine lactone analogues with ciprofloxacin (see \ref{sec:AIA_intro}) joined either using a copper(I)-catalyzed azide-alkyne cycloaddition or an S$_N$2 reaction or peptide coupling.
+In this section, the factors affecting the design of the study are laid out, including the choices of autoinducers, antibiotics and linkers.
+
+\subsubsection{Autoinducers}
 
 The \textit{P. aeruginosa} autoinducers (see \ref{fgr:PA_autoinducers}) were chosen for use in this study as \textit{P. aeruginosa} is a significant human pathogen which shows high antibiotic resistance and utilises quorum sensing to coordinate pathogenic behaviours (see \ref{sec:PA}). 
 Specifically, C$_4$-HSL \compound{cmpd:HL4}, HHQ \compound{cmpd:HHQ} and PQS \compound{cmpd:PQS} derivatives were chosen as they were considered to be the most synthetically tractable.
-
-\subsubsection{Autoinducer efflux\label{sec:AI_eff}}
 
 Autoinducers must be exported from the cell in order to be used for intercellular communication, and the five known \textit{P. aeruginosa} autoinducers are exported by various different transport mechanisms.
 The mechanism is not well known for HHQ \compound{cmpd:HHQ} or AI-2 \compound{cmpd:AI2}, but it is know that
@@ -316,6 +364,8 @@ The difference in transport mechanism for C$_4$-HSL \compound{cmpd:HL4} and 3-ox
 3-oxo-C$_{12}$-HSL \compound{cmpd:HLO12} is exported primarily via the MexAB-OprM efflux system\cite{Evans1998,Poole2004}.
 The increased removal of 3-oxo-C$_{12}$-HSL \compound{cmpd:HLO12} from the cell by upregulation of the MexAB-OprM system leads to decreased production of additional 3-oxo-C$_{12}$-HSL \compound{cmpd:HLO12} (as the positive feedback loop is disrupted, see \ref{sec:PA}), and hence decreased production of pyocyanin, elastase and casein protease. 
 It is expected that MexAB-OprM upregulation would also disrupt biofilm formation as a decrease in 3-oxo-C$_{12}$-HSL \compound{cmpd:HLO12} levels would disrupt Las-mediated quorum sensing\cite{Davies1998}, but no direct studies of this could be found.
+
+\todo{summary}
 
 \subsubsection{Antibiotics}
 
@@ -336,17 +386,14 @@ Trimethoprim (see \ref{fgr:ABs}) is a dihydrofolate reductase inhibitor used pri
 \end{figure}
 
 
-
-\subsubsection{Antibiotic efflux}
-
 Ciprofloxacin \compound{cmpd:Cip} enters \textit{P. aeruginosa} by diffusion\cite{Celesk1989}, but is pumped out by efflux pumps\cite{Poole2000}. In the planktonic state several efflux pumps are known to pump out ciprofloxacin \compound{cmpd:Cip}, including MexAB–OprM, MexCD–OprJ, MexEF–OprN, MexXY–OprM, MexJK–OprM and MexVW–OprM\cite{Poole2004}. 
 However, in biofilms only MexEF-OprN has an effect\cite{DeKievit2001}.
 
 Trimethoprim \compound{cmpd:Tri} is mainly exported by the MexAB–OprM\cite{Kohler1996}, MexCD–OprJ\cite{Poole1996} and MexEF–OprN\cite{Kohler1997} multidrug efflux systems\cite{Poole2001,Poole2004} in the planktonic state. It is not known which pumps are used to export trimethoprim \compound{cmpd:Tri} from biofilms, but biofilms do show increased resistance to it\cite{Olson2002}.
 
-\subsubsection{Conjugate efflux and antibiotic action\label{sec:conj_eff}}
+\subsubsection{Conjugates\label{sec:conj_eff}}
 
-There are two ways in which the conjugates could disrupt \textit{P. aeruginosa} growth:
+There are two ways in which autoinducer-antibiotic conjugates could disrupt \textit{P. aeruginosa} growth:
 
 \begin{enumerate}
 
@@ -364,7 +411,7 @@ This mechanism could in principal work for trimethoprim \compound{cmpd:Tri} as w
 
 These synergistic mechanisms of action made autoinducer-antibiotic conjugates a promising target. An initial library was designed using a copper(I)-catalysed azide-alkyne cycloaddition\cite{Tornoe2002,Rostovtsev2002}, commonly referred to as a click reaction (although this is a more general term), to join each combination of autoinducer and antibiotic together. 
 
-
+\todo{more? move from RnD?}
 
 \subsubsection{Cleavable linkers\label{sec:cleavable_intro}}
 
@@ -394,43 +441,7 @@ The \textit{N}-(acetoxyethoxycarbonyl) (R = Me) linkers have been shown to be cl
 
 \subsubsection{HSL analogue-ciprofloxacin conjugates\label{sec:AIA_intro}}
 
-Following on from the library of compounds based on \textit{P. aeruginosa} autoinducers, a series of conjugates based on analogues of HSL were planned. This strategy was inspired by a paper\cite{Ganguly2011} and patent\cite{Iyer2012} by Ganguly \textit{et al.}, who synthesised and characterised a conjugate \compound{cmpd:SHL4CipMe} of methyl ciprofloxacin with homocysteine thiolactone (see \ref{fgr:SHL4CipMe}). Homocysteine thiolactone is an analogue of homoserine lactone with the ring oxygen replaced by sulfur, and has been used as the head group in several other known quorum sensing modulators\cite{Eberhard1986,Schaefer1996,Passador1996,Smith2003,Chhabra1993,McInnis2011,Geske2007,Janssens2007}.
-
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[scale=1]{SHL4CipMe}
-		\caption{The HCTL-CipMe conjugate \compound{cmpd:SHL4CipMe} studied by Ganguly \textit{et al.}\cite{Ganguly2011,Iyer2012}.\label{fgr:SHL4CipMe}}
-	\end{center}
-\end{figure}
-
-
-As part of their characterisation of the HCTL-CipMe conjugate \compound{cmpd:SHL4CipMe}, Ganguly \textit{et al.} found the minimum inhibitory concentration (MIC) of the conjugate in \textit{P. aeruginosa} under standard planktonic conditions. 
-The MIC was found to be ten times higher for the conjugate vs. ciprofloxacin (50 vs. 5 $\mu$m), indicating that the conjgate was less effective than ciprofloxacin under planktonic conditions. 
-
-Ganguly \textit{et al.} then investigated the effect of the conjugate on biofilms. 
-The conjugate and ciprofloxacin were first added to dilute \textit{P. aeruginosa} liquid culture at 25 $\mu$m. 
-As expected, the culture failed to grow and form biofilm in the presence of ciprofloxacin, but did grow in the presence of the conjugate \compound{cmpd:SHL4CipMe}. 
-They then incubated cultures for 24 h, to allow biofilms to grow, before adding the compounds. In contrast, they found that the conjugate \compound{cmpd:SHL4CipMe} disrupted the biofilm more effectively than ciprofloxacin. 
-When the biofilm was grown for 48 or 72 hours the conjugate had similarly disruptive effects, whereas ciprofloxacin `did not show any significant antibacterial activity'.
-
-These results are exciting as they hint that an autoinducer conjugate might be able to combat an established \textit{P. aeruginosa} infection more effectively than the unmodified antibiotic. 
-Ganguly \textit{et al.} suggest that their conjugate is more effective than ciprofloxacin in penetrating biofilms, and/or better at avoiding being pumped out by multidrug efflux pumps. They posit that this could be due to the thiolactone head, as they also showed that unconjugated C$_4$-HCTL \compound{cmpd:SHL4} (see \ref{fgr:HL_SHL}) has `either enhanced uptake or functional activity' when compared with C$_4$-HSL \compound{cmpd:HL4}. 
-
-It is possible that the conjugate \compound{cmpd:SHL4CipMe} has higher activity against biofilms when compared with ciprofloxacin \compound{cmpd:Cip} because the conjugate \compound{cmpd:SHL4CipMe} avoids being pumped out by multidrug efflux pumps, or selects for the survival of mutants with upregulated efflux pumps, and hence disrupts quorum sensing systems (see \ref{sec:conj_eff}).
-
-While one might expect the conjugate \compound{cmpd:SHL4CipMe} to behave like C$_4$-HSL \compound{cmpd:HL4}, and hence passively diffuse in and out of cells, it is possible that its transport more closely resembles that of 3-oxo-C$_{12}$-HSL \compound{cmpd:HLO12}. 3-oxo-C$_{12}$-HSL \compound{cmpd:HLO12}'s accumulation in membranes and interaction with efflux pumps is thought to be based primarily on tail chain length (see \ref{sec:AI_eff}), and the ciprofloxacin half of the conjugate \compound{cmpd:SHL4CipMe} could be seen as a long tail, especially as the carboxylic acid is methylated and hence less polar.
-
-\begin{figure}[H]
-	\begin{center}
-		\schemeref[HL4]{cmpd:HL4}
-		\schemeref[SHL4]{cmpd:SHL4}
-		\includegraphics[scale=1]{HL_SHL}
-		\caption{
-		C$_4$-HSL \compound{cmpd:HL4} and C$_4$-HCTL \compound{cmpd:SHL4}. Note that Ganguly \textit{et al.} tested the \textit{S} enantiomer of C$_4$-HCTL \compound{cmpd:SHL4}, but used a racemic mixture in their HCTL-CipMe conjugate. %Ikeda2001
-		\label{fgr:HL_SHL}}
-	\end{center}
-\end{figure}
+Following on from the library of compounds based on \textit{P. aeruginosa} autoinducers and the work by Ganguly \textit{et al.} (see \ref{sec:prev}), a series of conjugates based on analogues of HSL were planned. 
 
 While the results found by Ganguly \textit{et al.} show promise, they only test one conjugate, and do not include controls to show that the HCTL group specifically is necessary for the enhanced effect.
 It was therefore decided to build on this work by synthesising a series of ciprofloxacin conjugates with head groups taken from known quorum sensing modulators\cite{Galloway2011,Hodgkinson2012a}, a selection of which are described in \ref{tbl:head_groups}. 
@@ -476,103 +487,4 @@ It was therefore decided to build on this work by synthesising a series of cipro
 \caption{Activities of quorum sensing modulators containing the head groups used in this study.\label{tbl:head_groups}} 
 \end{table}
 
-\newpage
-
-\section{Project aims and summary}
-
-The aim of this project is to produce and test a library of autoinducer-antibiotic conjugates with the goal of producing conjugates with greater potency than the parent antibiotics.
-The work is divided into two main sections. Section \ref{sec:AACs} focuses on conjugates of three \textit{P. aeruginosa} autoinducers (see \ref{fgr:PA_autoinducers}) with ciprofloxacin and trimethoprim (see \ref{fgr:ABs}) joined using a copper(I)-catalyzed azide-alkyne cycloaddition.
-Section \ref{sec:HSLCipCs} focuses on conjugates of homoserine lactone analogues with ciprofloxacin (see \ref{sec:AIA_intro}) joined either using a copper(I)-catalyzed azide-alkyne cycloaddition or an S$_N$2 reaction or peptide coupling.
-
-
-
-
-
-
-%The formation of biofilms can drastically increase MIC for many antibiotics \cite{Ceri1999}. For ciprofloxacin in \textit{P. aeruginosa} the MIC increases by 16 fold according to Ceri \textit{et al.} 
-
-%Ganguly \textit{et al.} used Bac-Light Live/Dead staining and confocal microscopy to image the biofilms, whereas so far I have used crystal violet staining. Crystal violet does not differentiate between live or dead cells, and so might not pick up on the antibacterial effects of compounds. However, their confocal microscopy results show a quantifiable decrease in biofilm thickness, and it may be possible to detect this using crystal violet.
-
-%
-%\newpage
-%
-%\section{Aims}
-%
-%The aim of this project is to produce a library of autoinducer-antibiotic conjugates with the hope of increasing the potency of the drugs and possibly restoring their antibacterial action against resistant strains. The library is built from a collection of \textit{P. aeruginosa} autoinducer derivatives with azide groups attached and a collection of antibiotics with alkyne groups attached. These collections will then be combined using a copper(I)-catalysed azide-alkyne cycloaddition\cite{Tornoe2002,Rostovtsev2002} reaction to form the library of final conjugates. This approach has recently been used by Zheng \textit{et al.}\cite{Zheng2014} to join the siderophore enterobactin \compound{cmpd:entero} (see \ref{fgr:Sids}) with ampicillin or amoxicillin (see \ref{fgr:pen_anas} in \ref{sec:Futpen}).
-%
-%\subsection{autoinducer-antibiotic conjugates}
-%
-%A copper(I)-catalysed azide-alkyne cycloaddition\cite{Tornoe2002,Rostovtsev2002}, commonly referred to as a click reaction although this is a more general term, will be used to join each combination of autoinducer and antibiotic together (see \ref{sch:QSAB_synth_overv}). This modular approach allows the library to be easily expanded by adding more QMSs or antibiotics, or indeed other groups such as siderophores, fluorescent or affinity tags, or resin beads. The library will then be screened for antibiotic activity against \textit{P. aeruginosa} and other pathogenic bacteria.
-%
-%\begin{scheme}[H]
-%	\begin{center}
-%		\includegraphics[scale=1]{QSAB_synth_overv}
-%		\caption{The proposed construction of the library using a copper(I)-catalysed azide-alkyne cycloaddition. \label{sch:QSAB_synth_overv}}
-%	\end{center}
-%\end{scheme}
-%
-%\subsection{autoinducer derivatives}
-%
-%The four main autoinducers used by \textit{P. auruginosa} are shown in \ref{fgr:PA_autoinducers} in \ref{sec:PAautoinducers}. 
-%We have decided to focus initially on the synthesis of azido analogues of C$_4$-HSL \compound{cmpd:HL4}, HHQ \compound{cmpd:HHQ} and PQS \compound{cmpd:PQS}. A synthesis of an azido analogue of 3-oxo-C$_{12}$-HSL \compound{cmpd:HLO12} has also been planned (see \ref{sch:HLO12N3_synth} in \ref{sec:Fut_HLO12}) and will be attempted in due course.
-%
-%The structure-activity relationships in PQS have been previously studied \cite{Hodgkinson2010}, and 5 and 6 positions could be substituted without significantly affecting the activity of the PQS molecule (see \ref{fgr:PQS_num}). Placing of the azide group at position 6 was chosen for synthetic reasons and the azide group was placed in the equivalent position in the HHQ analogue (see \ref{fgr:HHQPQSaz}).
-%
-%Alteration of the lactone group of C$_4$-HSL and other HSL derivatives is known to significantly decrease activity, especially where the number of H-bond donors or acceptors is altered \cite{Galloway2011}. Hence, the azide group will be included on the tail of C$_4$-HSL. Acyl tail length is known to play an important role in affinity, so we have decided to synthesise three analogues of C$_4$-HSL: azido-C$_2$-HSL \compound{cmpd:HL2N3}, azido-C$_4$-HSL \compound{cmpd:HL4N3} and azido-C$_6$-HSL \compound{cmpd:HL6N3} (see \ref{fgr:HL_anas}).
-%
-%
-%
-%\begin{figure}[H]
-%	\begin{center}
-%		\schemeref[PQS]{cmpd:PQS}
-%		\includegraphics[scale=1]{PQS_num}
-%		\caption{The atom numbering in PQS \compound{cmpd:PQS}. \label{fgr:PQS_num}}
-%	\end{center}
-%\end{figure}
-%
-%\begin{figure}[H]
-%	\begin{center}
-%		\schemeref[azHHQ]{cmpd:azHHQ}
-%		\schemeref[azPQS]{cmpd:azPQS}
-%		\includegraphics[scale=1]{azHHQPQS}
-%		\caption{The HHQ \compound{cmpd:HHQ} and PQS \compound{cmpd:PQS} analogues \compound{cmpd:azHHQ} and \compound{cmpd:azPQS}. \label{fgr:azHHQPQS}}
-%	\end{center}
-%\end{figure}
-%
-%\begin{figure}[H]
-%	\begin{center}
-%		\schemeref[HL2N3]{cmpd:HL2N3}
-%		\schemeref[HL4N3]{cmpd:HL4N3}
-%		\schemeref[HL6N3]{cmpd:HL6N3}
-%		\includegraphics[scale=1]{HL_anas}
-%		\caption{The C$_4$-HSL \compound{cmpd:HL4} analogues \compound{cmpd:cmpd:HL2N3}, \compound{cmpd:cmpd:HL4N3} and \compound{cmpd:cmpd:HL6N3}. \label{fgr:HL_anas}}
-%	\end{center}
-%\end{figure}
-%
-%\subsection{Ciprofloxcin analogues}
-%
-%Ciprofloxacin \compound{cmpd:cip} (see \ref{fgr:cip_num}) is second-generation fluoroquinolone antibiotic used to treat both Gram-positive and Gram-negative bacterial infections\cite{Oliphant2002}.
-%The structure-activity relationships for ciprofloxacin have been investigated \cite{Renau1996} and positions 2 and 7 were found not to cause loss of activity. It was therefore decided that alkyne tails would be added at these positions giving two analogues of ciprofloxacin, \compound{cmpd:hexpipcip} and \compound{cmpd:pipciphex} (see \ref{sch:cip_anas}).
-%
-%\begin{figure}[H]
-%	\begin{center}
-%		\schemeref[cip]{cmpd:cip}
-%		\includegraphics[scale=1]{cip_num}
-%		\caption{The atom numbering in ciprofloxacin \compound{cmpd:cip}. \label{fgr:cip_num}}
-%	\end{center}
-%\end{figure}
-%
-%\begin{figure}[H]
-%	\begin{center}
-%		\schemeref[pipciphex]{cmpd:pipciphex}
-%		\schemeref[hexpipcip]{cmpd:hexpipcip}
-%		\includegraphics[scale=1]{cip_anas}
-%		\caption{The proposed ciprofloxacin analogues \compound{cmpd:hexpipcip} and \compound{cmpd:pipciphex}. \label{sch:cip_anas}}
-%	\end{center}
-%\end{figure}
-%
-%, and this difference is more pronounced at high growth rates\cite{Evans1991}.
-%In addition, the resistance of intact biofilms is significantly higher than that of resuspended biofilm cells, suggesting that organization of the cells within the biofilm confers resistance\cite{Evans1991}. 
-%However, there are conflicting reports on whether \textit{P. aeruginosa} biofilms impede the diffusion of ciprofloxacin\cite{Suci1994,Shigeta1997,Kumon1994}, and regardless it has been shown that limited antibiotic diffusion through the biofilm is not the primary mechanism of resistance of \textit{P. aeruginosa} biofilms against ciprofloxacin \compound{cmpd:Cip}\cite{Walters2003}.
-%Instead it is likely that poor oxygen penetration and low metabolic activity within the interior of the biofilm is responsible for the low antibiotic activity.
-%This is expected for ciprofloxacin \compound{cmpd:Cip}, as it works by inhibiting DNA gyrase and topoisomerase IV, thereby inhibiting cell division.
+\todo{more?}
