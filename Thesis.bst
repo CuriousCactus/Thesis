@@ -585,7 +585,6 @@ FUNCTION {book}
       %format.number.series output
       %new.sentence
       publisher "publisher" output.check
-      address output
     }
     { %new.block
       format.book.crossref output.nonnull
