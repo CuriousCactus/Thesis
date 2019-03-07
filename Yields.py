@@ -51,14 +51,15 @@ for fnamei in fnamesi.split():
     text = fi.read() 
 
     # regexing
+    # NB match.group(0) means all of the match groups, NOT the first one!
     
     # mp
-    for match in re.finditer(r'\\textbf{mp} \\textit{T} \/ \$\^{\\circ}\$C = ([0-9]+)(\.[5-9])', text):
-        text = text.replace(match.group(0),str(int(match.group(1))+1),1)
-        print (match.group(0),str(int(match.group(1))+1))
-    for match in re.finditer(r'\\textbf{mp} \\textit{T} \/ \$\^{\\circ}\$C = ([0-9]+)(\.[0-4])', text):
-        text = text.replace(match.group(0),str(int(match.group(1))),1)
-        print (match.group(0),str(int(match.group(1))))
+    for match in re.finditer(r'(\\textbf{mp} \\textit{T} \/ \$\^{\\circ}\$C = )([0-9]+)(\.[5-9])', text):
+        text = text.replace(match.group(0),match.group(1)+str(int(match.group(2))+1),1)
+        print (match.group(0),match.group(1)+str(int(match.group(2))+1))
+    for match in re.finditer(r'(\\textbf{mp} \\textit{T} \/ \$\^{\\circ}\$C = )([0-9]+)(\.[0-4])', text):
+        text = text.replace(match.group(0),match.group(1)+str(int(match.group(2))),1)
+        print (match.group(0),match.group(1)+str(int(match.group(2))))
     #print (text)
         
     # # IR
