@@ -51,25 +51,35 @@ for fnamei in fnamesi.split():
     text = fi.read() 
 
     # regexing
-    # IR
-    irregex = r"\\noindent{\\textbf{IR} \(neat\) \$\\nu_{max}\$ \/ cm\$\^{-1}\$ =([\S\s]*?)\\\\\[1\\baselineskip\]"
-    matches = re.finditer(irregex, text)
-    for matchNum, match in enumerate(matches, start=1):
+    
+    # mp
+    for match in re.finditer(r'\\textbf{mp} \\textit{T} \/ \$\^{\\circ}\$C = ([0-9]+)(\.[5-9])', text):
+        text = text.replace(match.group(0),str(int(match.group(1))+1),1)
+        print (match.group(0),str(int(match.group(1))+1))
+    for match in re.finditer(r'\\textbf{mp} \\textit{T} \/ \$\^{\\circ}\$C = ([0-9]+)(\.[0-4])', text):
+        text = text.replace(match.group(0),str(int(match.group(1))),1)
+        print (match.group(0),str(int(match.group(1))))
+    #print (text)
         
-        #print ("Match {matchNum} was found at {start}-{end}: {match}".format(matchNum = matchNum, start = match.start(), end = match.end(), match = match.group()))
+    # # IR
+    # irregex = r"\\noindent{\\textbf{IR} \(neat\) \$\\nu_{max}\$ \/ cm\$\^{-1}\$ =([\S\s]*?)\\\\\[1\\baselineskip\]"
+    # matches = re.finditer(irregex, text)
+    # for matchNum, match in enumerate(matches, start=1):
         
-        for groupNum in range(0, len(match.groups())):
-            groupNum = groupNum + 1
+        # #print ("Match {matchNum} was found at {start}-{end}: {match}".format(matchNum = matchNum, start = match.start(), end = match.end(), match = match.group()))
+        
+        # for groupNum in range(0, len(match.groups())):
+            # groupNum = groupNum + 1
             
-            print ("{group}".format(group = match.group(groupNum)))
+            # print ("{group}".format(group = match.group(groupNum)))
         
-        irtext = match.group(groupNum)
+        # irtext = match.group(groupNum)
 
-        for match in re.finditer('([0-9]+[0-9])(\.[5-9])', irtext):
-            text = text.replace(match.group(0),str(int(match.group(1))+1),1)
-        for match in re.finditer('([0-9]+[0-9])(\.[0-4])', irtext):
-            text = text.replace(match.group(0),str(int(match.group(1))),1)
-        print (text)
+        # for match in re.finditer('([0-9]+[0-9])(\.[5-9])', irtext):
+            # text = text.replace(match.group(0),str(int(match.group(1))+1),1)
+        # for match in re.finditer('([0-9]+[0-9])(\.[0-4])', irtext):
+            # text = text.replace(match.group(0),str(int(match.group(1))),1)
+        # print (text)
     
     # # Yields
     # text = re.sub('([^\.][0-9]+) \\\%', '\g<1>\%', text)
