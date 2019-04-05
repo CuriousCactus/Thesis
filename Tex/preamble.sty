@@ -55,7 +55,6 @@
 \patchcmd{\thebibliography}{\section*}{\section}{}{}
 \patchcmd{\thenomenclature}{\section*}{\section}{}{}
 
-
 %subsubsectioning
 %%%%%%%%%%%%%%%%%%%%
 \usepackage{titlesec}
@@ -95,6 +94,11 @@
 
 \titlespacing*{\subsubsection}
 {0pt}{1\baselineskip}{1\baselineskip}
+
+\raggedbottom
+
+\let\stdsection\section
+\renewcommand*\section{\cleardoublepage\stdsection}
 
 %You need the bib and bst files and the filename must have no spaces
 
